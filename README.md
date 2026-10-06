@@ -1421,6 +1421,84 @@ Lifecycle measurements near the dataset boundary can be incomplete.
 
 ---
 
+# 📈 Additional Analytical Visuals
+
+These visuals are generated from the project's analytical outputs and are intended to make the README show the breadth of the analysis rather than only the headline KPIs.
+
+## Retention vs Churn
+
+<p align="center">
+<img src="assets/08_retention_churn.png" alt="Netflix Top 10 retention versus churn" width="92%">
+</p>
+
+Shows the observed weekly relationship between title retention and churn.
+
+## Global Concentration
+
+<p align="center">
+<img src="assets/09_global_concentration.png" alt="Global Netflix content concentration" width="92%">
+</p>
+
+Tracks concentration across the leading observed titles.
+
+## Breakout Titles
+
+<p align="center">
+<img src="assets/10_breakout_titles.png" alt="Netflix breakout titles" width="92%">
+</p>
+
+Highlights titles with strong observed two-week view acceleration.
+
+## Country Similarity
+
+<p align="center">
+<img src="assets/11_country_similarity.png" alt="Netflix country market similarity" width="92%">
+</p>
+
+Shows the strongest observed similarities between audience markets.
+
+## Statistical Evidence
+
+<p align="center">
+<img src="assets/12_statistical_effects.png" alt="Netflix statistical effect sizes" width="92%">
+</p>
+
+Summarizes reported statistical effect sizes from the project's inferential analysis.
+
+## Forecast Model Feature Importance
+
+<p align="center">
+<img src="assets/13_model_feature_importance.png" alt="Forecast model feature importance" width="92%">
+</p>
+
+Compares permutation importance with mean absolute SHAP importance where available.
+
+## Forecast Model Stability
+
+<p align="center">
+<img src="assets/14_model_stability.png" alt="Forecast model stability" width="92%">
+</p>
+
+Shows model performance across chronological validation cutoffs.
+
+## Data Coverage Drift
+
+<p align="center">
+<img src="assets/15_data_drift.png" alt="Netflix data coverage drift" width="92%">
+</p>
+
+Shows how view coverage and unique observed entities change across periods.
+
+## Cohort Lifecycle
+
+<p align="center">
+<img src="assets/16_cohort_median_views.png" alt="Netflix cohort lifecycle median views" width="92%">
+</p>
+
+Shows median observed views by cohort age.
+
+---
+
 # 🏁 Final Takeaway
 
 **Netflix Content Intelligence v8.1 is an end-to-end analytics system, not just a visualization project.**
