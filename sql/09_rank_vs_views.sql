@@ -1,0 +1,1 @@
+SELECT weekly_rank, COUNT(*) AS rows_with_views, AVG(weekly_views) AS avg_views, AVG(weekly_hours_viewed) AS avg_hours FROM global_weekly WHERE weekly_views IS NOT NULL GROUP BY weekly_rank ORDER BY weekly_rank;

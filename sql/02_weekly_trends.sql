@@ -1,0 +1,1 @@
+SELECT week, SUM(weekly_views) AS views, SUM(weekly_hours_viewed) AS hours, COUNT(*) AS rows, SUM(CASE WHEN weekly_views IS NOT NULL THEN 1 ELSE 0 END) AS views_coverage_rows, SUM(CASE WHEN weekly_hours_viewed IS NOT NULL THEN 1 ELSE 0 END) AS hours_coverage_rows FROM global_weekly GROUP BY week ORDER BY week;

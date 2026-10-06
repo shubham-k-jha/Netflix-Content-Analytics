@@ -1,0 +1,88 @@
+# ============================================================
+# DATA — NEVER COMMIT
+# ============================================================
+
+# All raw Netflix data
+data/raw/*
+!data/raw/.gitkeep
+
+# All generated/processed data
+data/processed/*
+!data/processed/.gitkeep
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# CSV / TSV / Parquet data files
+*.csv
+*.tsv
+*.parquet
+*.feather
+
+# Generated analytical outputs
+reports/*
+!reports/.gitkeep
+
+
+# ============================================================
+# PYTHON
+# ============================================================
+
+__pycache__/
+*.py[cod]
+*.pyo
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+.venv/
+venv/
+env/
+ENV/
+
+*.egg-info/
+dist/
+build/
+
+
+# ============================================================
+# ENVIRONMENT / SECRETS
+# ============================================================
+
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+
+
+# ============================================================
+# JUPYTER
+# ============================================================
+
+.ipynb_checkpoints/
+
+
+# ============================================================
+# IDE / OS
+# ============================================================
+
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+
+# ============================================================
+# LOGS / TEMPORARY FILES
+# ============================================================
+
+*.log
+*.tmp
+*.bak
+*.swp
+*.cache

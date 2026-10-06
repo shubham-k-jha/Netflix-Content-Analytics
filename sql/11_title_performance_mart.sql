@@ -1,0 +1,1 @@
+SELECT show_title,content_type,peak_rank,peak_views,longevity_weeks_observed,elapsed_weeks,country_reach,country_diversity_index,performance_segment,breakout_flag FROM title_performance_mart ORDER BY peak_views DESC NULLS LAST;

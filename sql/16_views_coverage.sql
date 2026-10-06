@@ -1,0 +1,1 @@
+SELECT CAST(strftime('%Y',week) AS INTEGER) AS year, COUNT(*) AS rows, SUM(CASE WHEN weekly_views IS NOT NULL THEN 1 ELSE 0 END) AS views_rows, ROUND(100.0*SUM(CASE WHEN weekly_views IS NOT NULL THEN 1 ELSE 0 END)/COUNT(*),2) AS views_coverage_pct FROM global_weekly GROUP BY year ORDER BY year;

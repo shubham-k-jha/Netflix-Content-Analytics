@@ -1,0 +1,61 @@
+{
+  "version": "8.1.0",
+  "required_tables": [
+    "global_weekly",
+    "country_weekly",
+    "most_popular",
+    "tmdb_metadata",
+    "entity_performance",
+    "survival_curve",
+    "h1_2026_most_watched",
+    "source_registry",
+    "title_performance_mart",
+    "country_similarity",
+    "release_age_performance",
+    "rank_volatility",
+    "survival_by_segment",
+    "breakout_titles",
+    "forecast_benchmarks",
+    "model_permutation_importance",
+    "forecast_error_analysis",
+    "statistical_results",
+    "weekly_movement",
+    "cohort_analysis",
+    "global_concentration",
+    "country_concentration",
+    "country_drilldown",
+    "country_title_drilldown",
+    "model_stability",
+    "data_drift_by_year",
+    "model_performance_drift",
+    "executive_kpis",
+    "external_catalog_reference"
+  ],
+  "grains": {
+    "global_weekly": [
+      "week",
+      "category",
+      "weekly_rank"
+    ],
+    "country_weekly": [
+      "country_iso2",
+      "week",
+      "category",
+      "weekly_rank"
+    ],
+    "most_popular": [
+      "category",
+      "rank"
+    ],
+    "h1_2026_most_watched": [
+      "content_type",
+      "rank"
+    ]
+  },
+  "rules": {
+    "weekly_rank": "1..10",
+    "missing_views": "unknown/unavailable, never zero-filled",
+    "country_semantics": "audience ranking geography, not production geography",
+    "tmdb_semantics": "external reference metadata, not Netflix audience measurement"
+  }
+}

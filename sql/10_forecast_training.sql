@@ -1,0 +1,1 @@
+SELECT week,entity_key,show_title,weekly_views,prev_views,next_views,rank_change,cumulative_weeks_in_top_10 FROM global_weekly WHERE weekly_views IS NOT NULL AND prev_views IS NOT NULL AND next_views IS NOT NULL AND is_continuing_from_prev_week=1 AND is_continuing_next_week=1 ORDER BY week;

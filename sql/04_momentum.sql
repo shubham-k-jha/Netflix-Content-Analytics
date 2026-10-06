@@ -1,0 +1,1 @@
+SELECT week, show_title, content_type, weekly_rank, rank_change, weekly_views, views_wow_pct FROM global_weekly WHERE weekly_views IS NOT NULL AND rank_change IS NOT NULL ORDER BY week DESC, ABS(rank_change) DESC LIMIT 100;

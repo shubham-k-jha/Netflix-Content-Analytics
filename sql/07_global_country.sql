@@ -1,0 +1,1 @@
+SELECT g.week,g.show_title,g.content_type,g.weekly_rank,g.weekly_views,COUNT(DISTINCT c.country_iso2) AS countries_that_week FROM global_weekly g LEFT JOIN country_weekly c ON c.title_family_key=g.title_family_key AND c.week=g.week GROUP BY g.week,g.show_title,g.content_type,g.weekly_rank,g.weekly_views ORDER BY g.week DESC,g.weekly_rank;
