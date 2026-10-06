@@ -1274,6 +1274,481 @@ Lifecycle measurements near the dataset boundary can be incomplete.
 
 ---
 
+# 💼 Business Questions the Project Answers
+
+This project is designed around **business questions**, not just technical metrics.
+
+The analytical system can be used to investigate the following decision areas.
+
+---
+
+## 1. Executive Performance Questions
+
+### Q1. What content is performing best globally?
+
+**Analysis:** Global weekly performance, rank, views, hours and title-level metrics.
+
+**Business use:** Identify the titles and content categories currently driving the strongest observed Top 10 performance.
+
+---
+
+### Q2. Is performance concentrated in a small number of titles?
+
+**Analysis:** Top-1, Top-3 and Top-10 concentration metrics.
+
+**Business use:** Determine whether observed engagement is broadly distributed or heavily dependent on a small number of major hits.
+
+---
+
+### Q3. Is the content portfolio becoming more or less concentrated?
+
+**Analysis:** Weekly concentration trends and HHI-style concentration measures.
+
+**Business use:** Monitor whether portfolio dependence on blockbuster titles is increasing or decreasing.
+
+---
+
+### Q4. Which content categories consistently perform well?
+
+**Analysis:** Global performance segmentation and category-level comparisons.
+
+**Business use:** Identify categories associated with stronger observed Top 10 performance and persistence.
+
+---
+
+### Q5. Are strong-performing titles also durable?
+
+**Analysis:** Peak performance versus observed longevity and lifecycle metrics.
+
+**Business use:** Separate short-lived spikes from titles that sustain audience attention over multiple weeks.
+
+---
+
+# 2. Content Lifecycle Questions
+
+### Q6. How long do titles typically remain in the Top 10?
+
+**Analysis:** Observed longevity, retention and survival analysis.
+
+**Business use:** Understand the typical visible lifecycle of content after entering the Top 10.
+
+---
+
+### Q7. Which titles have unusually long lifecycles?
+
+**Analysis:** Title-level observed longevity and survival metrics.
+
+**Business use:** Identify unusually durable content for deeper qualitative investigation.
+
+---
+
+### Q8. Which titles lose momentum quickly?
+
+**Analysis:** Entry, continuation, churn and momentum metrics.
+
+**Business use:** Detect titles whose initial visibility does not translate into sustained Top 10 presence.
+
+---
+
+### Q9. What proportion of titles continue from one week to the next?
+
+**Analysis:** Weekly retention analysis.
+
+**Business use:** Understand how frequently observed Top 10 exposure persists across weeks.
+
+---
+
+### Q10. How frequently do titles churn?
+
+**Analysis:** Weekly churn analysis.
+
+**Business use:** Monitor how quickly visible audience attention turns over.
+
+---
+
+### Q11. Are titles entering the Top 10 becoming more or less persistent over time?
+
+**Analysis:** Cohort and lifecycle analysis.
+
+**Business use:** Compare lifecycle behavior across entry cohorts.
+
+---
+
+### Q12. Are current lifecycle observations complete?
+
+**Analysis:** Right-censoring checks.
+
+**Business use:** Prevent recent titles from being incorrectly interpreted as having short completed lifetimes.
+
+---
+
+# 3. Breakout and Momentum Questions
+
+### Q13. Which titles are breaking out?
+
+**Analysis:** Breakout detection and two-week view acceleration.
+
+**Business use:** Identify titles whose trajectory is changing rapidly rather than simply ranking highly.
+
+---
+
+### Q14. Which titles are gaining momentum before becoming major performers?
+
+**Analysis:** Week-over-week and two-week acceleration metrics.
+
+**Business use:** Detect emerging titles that may deserve additional attention.
+
+---
+
+### Q15. Are breakouts global or concentrated in specific markets?
+
+**Analysis:** Global and country-level breakout analysis.
+
+**Business use:** Distinguish broad international momentum from market-specific breakouts.
+
+---
+
+### Q16. Which titles have sustained momentum rather than a one-week spike?
+
+**Analysis:** Multi-week movement and lifecycle analysis.
+
+**Business use:** Separate temporary surges from more durable performance trajectories.
+
+---
+
+# 4. Country and International Market Questions
+
+### Q17. Which audience markets show the strongest title performance?
+
+**Analysis:** Country-level Top 10 performance.
+
+**Business use:** Identify markets where specific content is demonstrating strong observed engagement.
+
+---
+
+### Q18. Which titles have the broadest international reach?
+
+**Analysis:** Market breadth and country coverage.
+
+**Business use:** Identify content that performs across many audience markets rather than relying on one market.
+
+---
+
+### Q19. Which titles are geographically concentrated?
+
+**Analysis:** Country concentration and market-level performance.
+
+**Business use:** Distinguish globally distributed content from market-specific content.
+
+---
+
+### Q20. Which countries behave similarly?
+
+**Analysis:** Country similarity using observed title overlap and Jaccard similarity.
+
+**Business use:** Identify audience markets with similar observed Top 10 content patterns.
+
+---
+
+### Q21. Can market similarity reveal groups of countries with similar content behavior?
+
+**Analysis:** Country similarity matrix and market clustering-style exploration.
+
+**Business use:** Support market segmentation and comparative content analysis.
+
+---
+
+### Q22. Where does a title perform strongly relative to its global performance?
+
+**Analysis:** Global-versus-country comparisons.
+
+**Business use:** Identify markets where a title shows particularly strong observed traction.
+
+---
+
+# 5. Content Portfolio Questions
+
+### Q23. Is the observed portfolio balanced across content types?
+
+**Analysis:** Content-mix analysis.
+
+**Business use:** Understand the composition of observed Top 10 performance across available categories.
+
+---
+
+### Q24. Are a few titles responsible for a disproportionate amount of observed engagement?
+
+**Analysis:** Concentration metrics.
+
+**Business use:** Assess dependence on major hits.
+
+---
+
+### Q25. Does market breadth differ across content?
+
+**Analysis:** Country coverage and market-breadth analysis.
+
+**Business use:** Compare internationally scalable content with geographically concentrated content.
+
+---
+
+### Q26. Which content shows both strong performance and strong persistence?
+
+**Analysis:** Combined performance and lifecycle metrics.
+
+**Business use:** Identify titles that combine audience scale with durability.
+
+---
+
+# 6. Forecasting Questions
+
+### Q27. Can recent Top 10 behavior predict next-week views?
+
+**Analysis:** Chronological next-week views forecasting.
+
+**Business use:** Estimate near-term performance for titles already observed in consecutive Top 10 weeks.
+
+---
+
+### Q28. How much better can a machine-learning model perform than a naive baseline?
+
+**Analysis:** Naive, Ridge, Random Forest and HistGradientBoosting benchmark.
+
+**Audited result:** The best non-naive model, HistGradientBoosting, improved MAE over the naive benchmark by **84.38%** on the defined holdout.
+
+**Business use:** Quantify whether modeling provides useful predictive value beyond a simple baseline.
+
+---
+
+### Q29. Which forecasting model performs best?
+
+**Analysis:** Chronological holdout benchmark.
+
+**Audited result:** HistGradientBoosting was the strongest non-naive model in the audited benchmark.
+
+**Business use:** Select a model based on out-of-time predictive performance rather than training performance alone.
+
+---
+
+### Q30. Is the forecasting model stable across time?
+
+**Analysis:** Chronological model-stability evaluation.
+
+**Business use:** Determine whether predictive performance is reasonably consistent across different historical cutoffs.
+
+---
+
+### Q31. Which variables contribute most to forecast performance?
+
+**Analysis:** Permutation importance and SHAP where available.
+
+**Business use:** Understand which observed signals contain the most predictive information.
+
+**Important:** predictive importance is not causal evidence.
+
+---
+
+### Q32. How large are forecast errors?
+
+**Analysis:** MAE, RMSE, R², sMAPE and error diagnostics.
+
+**Business use:** Quantify forecast reliability rather than reporting only a single accuracy number.
+
+---
+
+# 7. Statistical Evidence Questions
+
+### Q33. Are observed differences statistically meaningful?
+
+**Analysis:** Statistical hypothesis tests and effect sizes.
+
+**Business use:** Distinguish potentially meaningful patterns from differences that may plausibly arise from sampling variation.
+
+---
+
+### Q34. How large are the observed effects?
+
+**Analysis:** Effect-size reporting.
+
+**Business use:** Avoid treating statistical significance alone as evidence of practical importance.
+
+---
+
+### Q35. How should multiple statistical tests be interpreted?
+
+**Analysis:** Benjamini-Hochberg false discovery rate correction.
+
+**Business use:** Reduce the risk of interpreting a large number of statistical tests as independent discoveries.
+
+---
+
+### Q36. Are statistical relationships causal?
+
+**Answer:** No.
+
+The project is observational. Statistical association and predictive importance should not be interpreted as causal effects.
+
+---
+
+# 8. Data Quality and Trust Questions
+
+### Q37. Can the source grain be trusted?
+
+**Analysis:** Explicit global and country grain validation.
+
+**Audited result:**
+
+```text
+Global source grain integrity: 100%
+Global: 40 rows/week
+Country: 10 rows/category/week/country
+```
+
+**Business use:** Prevent duplicate or incorrectly aggregated records from contaminating KPIs.
+
+---
+
+### Q38. Are the source metrics valid?
+
+**Analysis:** Metric validity checks.
+
+**Audited result:** **100% metric validity**.
+
+**Business use:** Establish a basic reliability gate before using analytical outputs.
+
+---
+
+### Q39. Are title fields complete?
+
+**Analysis:** Title completeness checks.
+
+**Audited result:** **100% title completeness**.
+
+---
+
+### Q40. How much of the global dataset has views available?
+
+**Analysis:** Source coverage analysis.
+
+**Audited result:** **62.77% global view coverage**.
+
+**Business use:** Prevent analysts from silently treating unavailable view metrics as zero.
+
+---
+
+### Q41. How complete is runtime information?
+
+**Analysis:** Runtime coverage validation.
+
+**Audited result:** **62.77% global runtime coverage**.
+
+---
+
+### Q42. How complete is hours-viewed information?
+
+**Analysis:** Hours coverage validation.
+
+**Audited result:** **100% global hours coverage** in the audited build.
+
+---
+
+### Q43. Can external metadata be trusted as complete Netflix catalog data?
+
+**Answer:** No.
+
+The audited TMDB entity coverage is **51.92%**, and TMDB is treated only as external enrichment.
+
+---
+
+# 9. Data Provenance Questions
+
+### Q44. Can analytical outputs be traced back to source inputs?
+
+**Analysis:** Source manifests, provenance records and SHA-256 hashes.
+
+**Audited result:**
+
+```text
+64 / 64 manifest hashes matched
+```
+
+**Business use:** Improve reproducibility and confidence in generated outputs.
+
+---
+
+### Q45. Are duplicate source aliases being double-counted?
+
+**Analysis:** Source-alias and grain validation.
+
+**Business use:** Prevent official-source aliases from artificially inflating counts.
+
+---
+
+### Q46. Can the analysis be reproduced without committing the datasets to GitHub?
+
+**Answer:** Yes, provided the official source data and any required reference inputs are available.
+
+The repository is designed around:
+
+```text
+Code
++
+Source URLs
++
+Validation
++
+Pipeline
++
+Documentation
+=
+Reproducible analytical build
+```
+
+---
+
+# 10. Decision-Oriented Questions
+
+The project can therefore be used as a decision-support framework for questions such as:
+
+| Business Decision | Relevant Analysis |
+|---|---|
+| Which titles deserve deeper investigation? | Performance + lifecycle |
+| Which titles are emerging? | Breakouts + momentum |
+| Which titles are durable? | Retention + survival |
+| Which markets behave similarly? | Country similarity |
+| Where is performance concentrated? | HHI + concentration |
+| Is content internationally scalable? | Market breadth |
+| Is performance becoming more concentrated? | Weekly concentration |
+| Can next-week views be estimated? | Forecasting |
+| Which model should be used? | Chronological benchmark |
+| Can the forecast be trusted over time? | Model stability |
+| Which signals drive prediction? | Permutation importance + SHAP |
+| Are differences statistically supported? | Statistical testing + FDR |
+| Can the data be trusted? | Data-quality framework |
+| Can results be reproduced? | Provenance + manifests |
+
+---
+
+# 🧠 What the Project Does NOT Claim
+
+The business questions above must be interpreted within the measurement boundaries of the source data.
+
+The project cannot directly answer:
+
+- What total Netflix viewing is across the entire catalog
+- How many people watched titles outside the Top 10
+- Why a title became popular
+- Whether a specific factor caused viewership
+- A title's true complete lifetime when it is right-censored
+- Production-country performance from audience-market records
+- Netflix catalog completeness from TMDB matching
+
+The correct analytical framing is:
+
+> **What can be learned from the observed Netflix Top 10 measurement, and how reliably can those observations support business decisions?**
+
+---
+
 # 💼 Skills Demonstrated
 
 ## Data Analytics
@@ -1383,122 +1858,132 @@ Lifecycle measurements near the dataset boundary can be incomplete.
 
 # 🖼️ Project Visuals
 
-## Architecture
+<table>
+<tr>
+<td align="center" width="50%">
 
-<p align="center">
+### Architecture
 <img src="assets/02_architecture.png" alt="Netflix analytics architecture" width="100%">
-</p>
 
-## Project Scale
+</td>
+<td align="center" width="50%">
 
-<p align="center">
+### Project Scale
 <img src="assets/03_project_kpis.png" alt="Netflix project scale" width="100%">
-</p>
 
-## Global Activity
+</td>
+</tr>
 
-<p align="center">
-<img src="assets/04_global_weekly_views.png" alt="Global weekly views" width="92%">
-</p>
+<tr>
+<td align="center" width="50%">
 
-## Country Coverage
+### Global Activity
+<img src="assets/04_global_weekly_views.png" alt="Global weekly views" width="100%">
 
-<p align="center">
-<img src="assets/05_country_coverage.png" alt="Country coverage" width="92%">
-</p>
+</td>
+<td align="center" width="50%">
 
-## Forecast Benchmark
+### Country Coverage
+<img src="assets/05_country_coverage.png" alt="Country coverage" width="100%">
 
-<p align="center">
-<img src="assets/06_forecast_benchmark.png" alt="Forecast benchmark" width="92%">
-</p>
+</td>
+</tr>
 
-## Data Quality
+<tr>
+<td align="center" width="50%">
 
-<p align="center">
-<img src="assets/07_data_quality.png" alt="Data quality scorecard" width="92%">
-</p>
+### Forecast Benchmark
+<img src="assets/06_forecast_benchmark.png" alt="Forecast benchmark" width="100%">
+
+</td>
+<td align="center" width="50%">
+
+### Data Quality
+<img src="assets/07_data_quality.png" alt="Data quality scorecard" width="100%">
+
+</td>
+</tr>
+</table>
 
 ---
 
 # 📈 Additional Analytical Visuals
 
-These visuals are generated from the project's analytical outputs and are intended to make the README show the breadth of the analysis rather than only the headline KPIs.
+<table>
+<tr>
+<td align="center" width="50%">
 
-## Retention vs Churn
+### Retention vs Churn
+<img src="assets/08_retention_churn.png" alt="Netflix Top 10 retention versus churn" width="100%">
 
-<p align="center">
-<img src="assets/08_retention_churn.png" alt="Netflix Top 10 retention versus churn" width="92%">
-</p>
+</td>
+<td align="center" width="50%">
 
-Shows the observed weekly relationship between title retention and churn.
+### Global Concentration
+<img src="assets/09_global_concentration.png" alt="Global Netflix content concentration" width="100%">
 
-## Global Concentration
+</td>
+</tr>
 
-<p align="center">
-<img src="assets/09_global_concentration.png" alt="Global Netflix content concentration" width="92%">
-</p>
+<tr>
+<td align="center" width="50%">
 
-Tracks concentration across the leading observed titles.
+### Breakout Titles
+<img src="assets/10_breakout_titles.png" alt="Netflix breakout titles" width="100%">
 
-## Breakout Titles
+</td>
+<td align="center" width="50%">
 
-<p align="center">
-<img src="assets/10_breakout_titles.png" alt="Netflix breakout titles" width="92%">
-</p>
+### Country Similarity
+<img src="assets/11_country_similarity.png" alt="Netflix country market similarity" width="100%">
 
-Highlights titles with strong observed two-week view acceleration.
+</td>
+</tr>
 
-## Country Similarity
+<tr>
+<td align="center" width="50%">
 
-<p align="center">
-<img src="assets/11_country_similarity.png" alt="Netflix country market similarity" width="92%">
-</p>
+### Statistical Evidence
+<img src="assets/12_statistical_effects.png" alt="Netflix statistical effect sizes" width="100%">
 
-Shows the strongest observed similarities between audience markets.
+</td>
+<td align="center" width="50%">
 
-## Statistical Evidence
+### Forecast Feature Importance
+<img src="assets/13_model_feature_importance.png" alt="Forecast model feature importance" width="100%">
 
-<p align="center">
-<img src="assets/12_statistical_effects.png" alt="Netflix statistical effect sizes" width="92%">
-</p>
+</td>
+</tr>
 
-Summarizes reported statistical effect sizes from the project's inferential analysis.
+<tr>
+<td align="center" width="50%">
 
-## Forecast Model Feature Importance
+### Forecast Model Stability
+<img src="assets/14_model_stability.png" alt="Forecast model stability" width="100%">
 
-<p align="center">
-<img src="assets/13_model_feature_importance.png" alt="Forecast model feature importance" width="92%">
-</p>
+</td>
+<td align="center" width="50%">
 
-Compares permutation importance with mean absolute SHAP importance where available.
+### Data Coverage Drift
+<img src="assets/15_data_drift.png" alt="Netflix data coverage drift" width="100%">
 
-## Forecast Model Stability
+</td>
+</tr>
 
-<p align="center">
-<img src="assets/14_model_stability.png" alt="Forecast model stability" width="92%">
-</p>
+<tr>
+<td align="center" width="50%">
 
-Shows model performance across chronological validation cutoffs.
+### Cohort Lifecycle
+<img src="assets/16_cohort_median_views.png" alt="Netflix cohort lifecycle median views" width="100%">
 
-## Data Coverage Drift
+</td>
+<td align="center" width="50%">
 
-<p align="center">
-<img src="assets/15_data_drift.png" alt="Netflix data coverage drift" width="92%">
-</p>
-
-Shows how view coverage and unique observed entities change across periods.
-
-## Cohort Lifecycle
-
-<p align="center">
-<img src="assets/16_cohort_median_views.png" alt="Netflix cohort lifecycle median views" width="92%">
-</p>
-
-Shows median observed views by cohort age.
+</td>
+</tr>
+</table>
 
 ---
-
 # 🏁 Final Takeaway
 
 **Netflix Content Intelligence v8.1 is an end-to-end analytics system, not just a visualization project.**
