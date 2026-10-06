@@ -92,10 +92,6 @@ The data is downloaded from Netflix's official published sources and generated l
 
 # 📊 Project at a Glance
 
-<p align="center">
-  <img src="assets/03_project_kpis.png" alt="Verified project KPIs" width="100%">
-</p>
-
 | Metric | Verified Scope |
 |---|---:|
 | Global weekly observations | **10,960** |
@@ -108,6 +104,238 @@ The data is downloaded from Netflix's official published sources and generated l
 | Automated tests | **37 / 37** |
 | Global source grain | **40 rows/week** |
 | Country source grain | **10 rows/category/week/country** |
+
+---
+
+# 📊 Visual Analysis — Read the Story Before the Details
+
+The visuals below are intentionally placed near the top of the README so a reviewer can understand the project in a few minutes before reading the implementation details. Each figure answers a specific analytical or business question rather than serving as decoration.
+
+> **How to read this section:** start with the architecture and project scale, then move through global performance, market coverage, lifecycle, concentration, breakouts, statistical evidence, forecasting, model interpretation, stability, drift, and data quality. The final two figures are Netflix's own H1 2026 reference visuals and are kept separate from the project's weekly Top 10 measurement.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 1. System Architecture
+<img src="assets/02_architecture.png" alt="Netflix Content Intelligence architecture" width="100%">
+
+**What it shows:** The end-to-end flow from official Netflix sources through ingestion, validation, normalization, analytical marts, SQL/statistics, lifecycle and market analysis, forecasting, reporting, and Streamlit.
+
+**Why it matters:** This makes clear that the project is a reproducible analytics system rather than a static notebook or dashboard.
+
+</td>
+<td width="50%" valign="top">
+
+### 2. Verified Project Scale
+<img src="assets/03_project_kpis.png" alt="Verified Netflix project KPIs" width="100%">
+
+**What it shows:** The audited size of the analytical system: 10,960 global observations, 510,340 country observations, 94 audience markets, 274 weeks, 25 SQL analyses, and 37 passing tests.
+
+**Why it matters:** It gives reviewers immediate evidence of scope, coverage, and engineering validation.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 3. Global Weekly Performance
+<img src="assets/04_global_weekly_views.png" alt="Global weekly Netflix views" width="100%">
+
+**What it shows:** Weekly global Top 10 viewing activity across the full observed period.
+
+**Why it matters:** This is the portfolio-level view of how observed Top 10 consumption changes over time and provides the baseline for trend, cohort, and forecasting analysis.
+
+</td>
+<td width="50%" valign="top">
+
+### 4. Country-Market Coverage
+<img src="assets/05_country_coverage.png" alt="Netflix country market coverage" width="100%">
+
+**What it shows:** The breadth of audience-market observations across the 94 markets represented in the source data.
+
+**Why it matters:** Country records describe **where the audience is measured**, not where content was produced. This view establishes the geographic foundation for market intelligence.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 5. Retention vs Churn
+<img src="assets/08_retention_churn.png" alt="Netflix title retention and churn analysis" width="100%">
+
+**What it shows:** How titles continue, disappear, or return across consecutive weekly Top 10 observations.
+
+**Why it matters:** It turns raw weekly rankings into lifecycle signals that help distinguish durable performers from short-lived peaks.
+
+</td>
+<td width="50%" valign="top">
+
+### 6. Global Concentration
+<img src="assets/09_global_concentration.png" alt="Netflix global performance concentration" width="100%">
+
+**What it shows:** How observed global performance is distributed rather than assuming every title contributes equally.
+
+**Why it matters:** Concentration helps answer whether the observed portfolio is broadly distributed or driven by a smaller set of high-performing titles.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 7. Breakout Titles
+<img src="assets/10_breakout_titles.png" alt="Netflix breakout title analysis" width="100%">
+
+**What it shows:** Titles with unusual short-term acceleration or breakout behavior based on the project's momentum framework.
+
+**Why it matters:** Breakout analysis identifies emerging signals that a simple all-time ranking can miss.
+
+</td>
+<td width="50%" valign="top">
+
+### 8. Country Similarity
+<img src="assets/11_country_similarity.png" alt="Netflix country similarity analysis" width="100%">
+
+**What it shows:** Similarity relationships between audience markets based on observed title-performance patterns.
+
+**Why it matters:** Similar markets can reveal comparable audience behavior and support more useful international segmentation than looking at countries independently.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 9. Statistical Evidence
+<img src="assets/12_statistical_effects.png" alt="Netflix statistical evidence analysis" width="100%">
+
+**What it shows:** Statistical effects and evidence generated from the project's hypothesis-testing framework, including multiple-testing control where applicable.
+
+**Why it matters:** It separates visible differences from differences that have statistical support. Statistical association is not treated as causation.
+
+</td>
+<td width="50%" valign="top">
+
+### 10. Forecast Benchmark
+<img src="assets/06_forecast_benchmark.png" alt="Netflix next-week forecasting benchmark" width="100%">
+
+**What it shows:** Chronological holdout performance for the next-week views forecasting models versus the naive baseline.
+
+**Why it matters:** The benchmark demonstrates whether recent observed behavior contains useful predictive signal without leaking future information into training.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 11. Forecast Feature Importance
+<img src="assets/13_model_feature_importance.png" alt="Netflix forecast feature importance" width="100%">
+
+**What it shows:** Which available predictors contribute most to forecast performance through model-interpretation analysis.
+
+**Why it matters:** Feature importance helps explain what the model uses; it does **not** prove that those variables cause viewership.
+
+</td>
+<td width="50%" valign="top">
+
+### 12. Forecast Model Stability
+<img src="assets/14_model_stability.png" alt="Netflix forecast model stability" width="100%">
+
+**What it shows:** How forecast behavior and errors vary across time or validation slices.
+
+**Why it matters:** A model that performs well only in one period is less useful operationally. Stability analysis tests whether performance is reasonably consistent.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 13. Data Coverage Drift
+<img src="assets/15_data_drift.png" alt="Netflix data coverage drift" width="100%">
+
+**What it shows:** Changes in data coverage and availability over the observed period.
+
+**Why it matters:** Apparent business trends can be misleading if the underlying measurement coverage changes. This view helps distinguish data-coverage effects from analytical signals.
+
+</td>
+<td width="50%" valign="top">
+
+### 14. Cohort Lifecycle Views
+<img src="assets/16_cohort_median_views.png" alt="Netflix cohort median views" width="100%">
+
+**What it shows:** Median observed views across lifecycle positions for title cohorts.
+
+**Why it matters:** Cohort analysis reveals how content behaves after entering the Top 10 and whether lifecycle patterns differ across entry periods.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 15. Data Quality Scorecard
+<img src="assets/07_data_quality.png" alt="Netflix data quality scorecard" width="100%">
+
+**What it shows:** The audited quality framework covering source grain integrity, metric validity, coverage, title completeness, and external metadata coverage.
+
+**Why it matters:** Analytics are only useful when the underlying measurements are understood and validated. The project explicitly distinguishes unavailable data from zero values.
+
+</td>
+<td width="50%" valign="top">
+
+### 16. H1 2026 — Top Movies Reference
+<img src="assets/NFLX_H12026_EngagementReport_Top10Movies.png" alt="Netflix H1 2026 top movies reference" width="100%">
+
+**What it shows:** Netflix's own H1 2026 engagement-report reference for top movies.
+
+**Why it matters:** This is contextual reference material from Netflix, not a replacement for the project's weekly Top 10 analytical dataset.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 17. H1 2026 — Top Shows Reference
+<img src="assets/NFLX_H12026_EngagementReport_Top10Shows.png" alt="Netflix H1 2026 top shows reference" width="100%">
+
+**What it shows:** Netflix's own H1 2026 engagement-report reference for top shows.
+
+**Why it matters:** It provides an official company-level reference point while remaining analytically separate from the project's weekly Top 10 fact tables.
+
+</td>
+<td width="50%" valign="top">
+
+**All project visuals are covered above.**
+
+The hero banner remains at the very top of the README, while this visual section contains every analytical/reference figure included in the repository assets.
+
+</td>
+</tr>
+</table>
+
+### What the visuals collectively establish
+
+The visual evidence follows a deliberate chain:
+
+```text
+SOURCE + ARCHITECTURE
+        ↓
+SCALE + COVERAGE
+        ↓
+GLOBAL + MARKET PERFORMANCE
+        ↓
+LIFECYCLE + CONCENTRATION
+        ↓
+BREAKOUTS + MARKET SIMILARITY
+        ↓
+STATISTICAL EVIDENCE
+        ↓
+FORECASTING + MODEL INTERPRETATION
+        ↓
+STABILITY + DRIFT
+        ↓
+DATA QUALITY + OFFICIAL REFERENCE CONTEXT
+```
+
+This means the README does not ask the reader to trust a model before showing where the data came from, how it was validated, what was observed, and where the analytical boundaries are.
 
 ---
 
@@ -1856,134 +2084,6 @@ The correct analytical framing is:
 
 ---
 
-# 🖼️ Project Visuals
-
-<table>
-<tr>
-<td align="center" width="50%">
-
-### Architecture
-<img src="assets/02_architecture.png" alt="Netflix analytics architecture" width="100%">
-
-</td>
-<td align="center" width="50%">
-
-### Project Scale
-<img src="assets/03_project_kpis.png" alt="Netflix project scale" width="100%">
-
-</td>
-</tr>
-
-<tr>
-<td align="center" width="50%">
-
-### Global Activity
-<img src="assets/04_global_weekly_views.png" alt="Global weekly views" width="100%">
-
-</td>
-<td align="center" width="50%">
-
-### Country Coverage
-<img src="assets/05_country_coverage.png" alt="Country coverage" width="100%">
-
-</td>
-</tr>
-
-<tr>
-<td align="center" width="50%">
-
-### Forecast Benchmark
-<img src="assets/06_forecast_benchmark.png" alt="Forecast benchmark" width="100%">
-
-</td>
-<td align="center" width="50%">
-
-### Data Quality
-<img src="assets/07_data_quality.png" alt="Data quality scorecard" width="100%">
-
-</td>
-</tr>
-</table>
-
----
-
-# 📈 Additional Analytical Visuals
-
-<table>
-<tr>
-<td align="center" width="50%">
-
-### Retention vs Churn
-<img src="assets/08_retention_churn.png" alt="Netflix Top 10 retention versus churn" width="100%">
-
-</td>
-<td align="center" width="50%">
-
-### Global Concentration
-<img src="assets/09_global_concentration.png" alt="Global Netflix content concentration" width="100%">
-
-</td>
-</tr>
-
-<tr>
-<td align="center" width="50%">
-
-### Breakout Titles
-<img src="assets/10_breakout_titles.png" alt="Netflix breakout titles" width="100%">
-
-</td>
-<td align="center" width="50%">
-
-### Country Similarity
-<img src="assets/11_country_similarity.png" alt="Netflix country market similarity" width="100%">
-
-</td>
-</tr>
-
-<tr>
-<td align="center" width="50%">
-
-### Statistical Evidence
-<img src="assets/12_statistical_effects.png" alt="Netflix statistical effect sizes" width="100%">
-
-</td>
-<td align="center" width="50%">
-
-### Forecast Feature Importance
-<img src="assets/13_model_feature_importance.png" alt="Forecast model feature importance" width="100%">
-
-</td>
-</tr>
-
-<tr>
-<td align="center" width="50%">
-
-### Forecast Model Stability
-<img src="assets/14_model_stability.png" alt="Forecast model stability" width="100%">
-
-</td>
-<td align="center" width="50%">
-
-### Data Coverage Drift
-<img src="assets/15_data_drift.png" alt="Netflix data coverage drift" width="100%">
-
-</td>
-</tr>
-
-<tr>
-<td align="center" width="50%">
-
-### Cohort Lifecycle
-<img src="assets/16_cohort_median_views.png" alt="Netflix cohort lifecycle median views" width="100%">
-
-</td>
-<td align="center" width="50%">
-
-</td>
-</tr>
-</table>
-
----
 # 🏁 Final Takeaway
 
 **Netflix Content Intelligence v8.1 is an end-to-end analytics system, not just a visualization project.**
