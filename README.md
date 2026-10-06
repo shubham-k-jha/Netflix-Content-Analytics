@@ -1,73 +1,54 @@
-::: {align="center"}
+<div align="center">
+
 # 🎬 Netflix Content Intelligence
 
 ### Source-Driven Netflix Top 10 Analytics • Global & Country Intelligence • Lifecycle • Forecasting • Machine Learning
 
-```{=html}
 <p align="center">
-```
-`<img src="assets/01_hero_banner.png" alt="Netflix Content Intelligence" width="100%">`{=html}
-```{=html}
+<img src="assets/01_hero_banner.png" alt="Netflix Content Intelligence" width="100%">
 </p>
-```
-```{=html}
-<p>
-```
-`<img src="https://img.shields.io/badge/Version-8.1-e50914?style=for-the-badge" alt="Version 8.1">`{=html}
-`<img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">`{=html}
-`<img src="https://img.shields.io/badge/SQL-25%20Analyses-336791?style=for-the-badge" alt="SQL">`{=html}
-`<img src="https://img.shields.io/badge/Tests-37%2F37%20Passing-2ea44f?style=for-the-badge" alt="Tests">`{=html}
-`<img src="https://img.shields.io/badge/Markets-94-111827?style=for-the-badge" alt="Markets">`{=html}
-```{=html}
-</p>
-```
-```{=html}
-<p>
-```
-`<b>`{=html}An end-to-end analytics system built from Netflix's
-published Top 10 data.`</b>`{=html}
-```{=html}
-</p>
-```
-```{=html}
-<p>
-```
-Python • SQL • Pandas • Scikit-learn • Statistics • Forecasting • SQLite
-• Streamlit
-```{=html}
-</p>
-```
-:::
 
-------------------------------------------------------------------------
+<p>
+<img src="https://img.shields.io/badge/Version-8.1-e50914?style=for-the-badge" alt="Version 8.1">
+<img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+<img src="https://img.shields.io/badge/SQL-25%20Analyses-336791?style=for-the-badge" alt="SQL">
+<img src="https://img.shields.io/badge/Tests-37%2F37%20Passing-2ea44f?style=for-the-badge" alt="Tests">
+<img src="https://img.shields.io/badge/Markets-94-111827?style=for-the-badge" alt="Markets">
+</p>
 
-## 📌 What this project is
+<p><b>An end-to-end analytics system built from Netflix's published Top 10 data.</b></p>
 
-**Netflix Content Intelligence v8.1** is a source-driven analytics
-project that rebuilds an analytical system from Netflix Top 10 data
-rather than treating a static dataset as the final product.
+<p>Python • SQL • Pandas • Scikit-learn • Statistics • Forecasting • SQLite • Streamlit</p>
+
+</div>
+
+---
+
+## 📌 What This Project Is
+
+**Netflix Content Intelligence v8.1** is a source-driven analytics project that rebuilds an analytical system from Netflix Top 10 data rather than treating a static dataset as the final product.
 
 The pipeline covers:
 
--   global weekly Top 10 performance
--   country-market intelligence
--   title/entity performance
--   entry, continuation, return and drop behavior
--   cohorts and lifecycle analysis
--   survival analysis with right-censoring
--   breakout and two-week momentum analysis
--   country similarity and concentration
--   statistical testing and Benjamini--Hochberg FDR
--   chronological next-week views forecasting
--   model stability, permutation importance and SHAP when available
--   SQL analytics
--   data-quality validation
--   provenance and reproducibility
--   an interactive Streamlit dashboard
+- Global weekly Top 10 performance
+- Country-market intelligence
+- Title/entity performance
+- Entry, continuation, return and drop behavior
+- Cohorts and lifecycle analysis
+- Survival analysis with right-censoring
+- Breakout and two-week momentum analysis
+- Country similarity and concentration
+- Statistical testing and Benjamini-Hochberg FDR
+- Chronological next-week views forecasting
+- Model stability, permutation importance and SHAP when available
+- SQL analytics
+- Data-quality validation
+- Provenance and reproducibility
+- Interactive Streamlit dashboard
 
-### Core workflow
+### Core Workflow
 
-``` text
+```text
 Official Netflix Sources
         ↓
 Raw Ingestion
@@ -87,88 +68,80 @@ Forecasting + ML
 Reports + Dashboard
 ```
 
-------------------------------------------------------------------------
+---
 
-## 🚫 Data is intentionally NOT stored in this GitHub repository
+# 🚫 Data Is Intentionally NOT Stored in This GitHub Repository
 
-This repository is designed to contain **code and documentation, not the
-large datasets**.
+> **Repository requirement:** keep the `assets/` folder in the repository because the README references the seven project visuals below. The large datasets and generated analytical outputs should remain local and ignored by Git.
+
+This repository is designed to contain **code and documentation, not the large datasets**.
 
 Do not commit:
 
--   raw Netflix TSV/CSV files
--   processed CSV files
--   Parquet files
--   SQLite databases
--   generated analytical datasets
+- Raw Netflix TSV/CSV files
+- Processed CSV files
+- Parquet files
+- SQLite databases
+- Generated analytical datasets
 
-The data is downloaded from Netflix's official published sources and
-generated locally.
+The data is downloaded from Netflix's official published sources and generated locally.
 
-> **Important:** the repository must be configured with a `.gitignore`
-> that excludes `data/raw/`, `data/processed/`, `reports/`, `*.csv`,
-> `*.tsv`, `*.parquet`, `*.db`, `*.sqlite`, and `*.sqlite3` before
-> pushing to GitHub.
+> **Important:** the repository must be configured with a `.gitignore` that excludes `data/raw/`, `data/processed/`, `reports/`, `*.csv`, `*.tsv`, `*.parquet`, `*.db`, `*.sqlite`, and `*.sqlite3` before pushing to GitHub.
 
-------------------------------------------------------------------------
+---
 
-# 📊 Project at a glance
+# 📊 Project at a Glance
 
-```{=html}
 <p align="center">
-```
-`<img src="assets/03_project_kpis.png" alt="Verified project KPIs" width="100%">`{=html}
-```{=html}
+  <img src="assets/03_project_kpis.png" alt="Verified project KPIs" width="100%">
 </p>
-```
-  Metric                                              Verified scope
-  ------------------------------ -----------------------------------
-  Global weekly observations                              **10,960**
-  Country weekly observations                            **510,340**
-  Audience markets                                            **94**
-  Weekly coverage                                      **274 weeks**
-  Coverage period                        **2021-07-04 → 2026-09-27**
-  Current Most Popular records                                **40**
-  SQL analyses                                           **25 / 25**
-  Automated tests                                        **37 / 37**
-  Global source grain                               **40 rows/week**
-  Country source grain             **10 rows/category/week/country**
 
-------------------------------------------------------------------------
+| Metric | Verified Scope |
+|---|---:|
+| Global weekly observations | **10,960** |
+| Country weekly observations | **510,340** |
+| Audience markets | **94** |
+| Weekly coverage | **274 weeks** |
+| Coverage period | **2021-07-04 → 2026-09-27** |
+| Current Most Popular records | **40** |
+| SQL analyses | **25 / 25** |
+| Automated tests | **37 / 37** |
+| Global source grain | **40 rows/week** |
+| Country source grain | **10 rows/category/week/country** |
+
+---
 
 # 🧭 Contents
 
--   [What this project is](#-what-this-project-is)
--   [Data
-    policy](#-data-is-intentionally-not-stored-in-this-github-repository)
--   [Project at a glance](#-project-at-a-glance)
--   [Official data sources](#-official-data-sources)
--   [Architecture](#-architecture)
--   [Analytical framework](#-analytical-framework)
--   [Global performance](#-global-performance)
--   [Country intelligence](#-country-intelligence)
--   [Lifecycle and survival](#-lifecycle-and-survival)
--   [Breakouts and momentum](#-breakouts-and-momentum)
--   [Statistical analysis](#-statistical-analysis)
--   [Forecasting and machine
-    learning](#-forecasting-and-machine-learning)
--   [Dashboard](#-dashboard)
--   [SQL](#-sql-analytics)
--   [Data quality and provenance](#-data-quality-and-provenance)
--   [Installation](#-installation)
--   [Download the data](#-download-the-data)
--   [Run the pipeline](#-run-the-pipeline)
--   [Testing](#-testing)
--   [Repository structure](#-repository-structure)
--   [Interpretation rules](#-critical-interpretation-rules)
--   [Limitations](#-limitations)
--   [Skills demonstrated](#-skills-demonstrated)
+- [What This Project Is](#-what-this-project-is)
+- [Data Policy](#-data-is-intentionally-not-stored-in-this-github-repository)
+- [Project at a Glance](#-project-at-a-glance)
+- [Official Data Sources](#-official-data-sources)
+- [Architecture](#-architecture)
+- [Analytical Framework](#-analytical-framework)
+- [Global Performance](#-global-performance)
+- [Country Intelligence](#-country-intelligence)
+- [Lifecycle and Survival](#-lifecycle-and-survival)
+- [Breakouts and Momentum](#-breakouts-and-momentum)
+- [Statistical Analysis](#-statistical-analysis)
+- [Forecasting and Machine Learning](#-forecasting-and-machine-learning)
+- [Dashboard](#-dashboard)
+- [SQL Analytics](#-sql-analytics)
+- [Data Quality and Provenance](#-data-quality-and-provenance)
+- [Installation](#-installation)
+- [Download the Data](#-download-the-data)
+- [Run the Pipeline](#-run-the-pipeline)
+- [Testing](#-testing)
+- [Repository Structure](#-repository-structure)
+- [Interpretation Rules](#-critical-interpretation-rules)
+- [Limitations](#-limitations)
+- [Skills Demonstrated](#-skills-demonstrated)
 
-------------------------------------------------------------------------
+---
 
-# 🗂️ Official data sources
+# 🗂️ Official Data Sources
 
-## 1. Global weekly Top 10
+## 1. Global Weekly Top 10
 
 Official Netflix source:
 
@@ -176,7 +149,7 @@ https://www.netflix.com/tudum/top10/data/all-weeks-global.tsv
 
 Download:
 
-``` bash
+```bash
 mkdir -p data/raw
 
 curl -L \
@@ -184,9 +157,9 @@ curl -L \
 -o data/raw/all-weeks-global.tsv
 ```
 
-------------------------------------------------------------------------
+---
 
-## 2. Country weekly Top 10
+## 2. Country Weekly Top 10
 
 Official Netflix source:
 
@@ -194,13 +167,13 @@ https://www.netflix.com/tudum/top10/data/all-weeks-countries.tsv
 
 Download:
 
-``` bash
+```bash
 curl -L \
 "https://www.netflix.com/tudum/top10/data/all-weeks-countries.tsv" \
 -o data/raw/all-weeks-countries.tsv
 ```
 
-------------------------------------------------------------------------
+---
 
 ## 3. Netflix Most Popular
 
@@ -208,15 +181,13 @@ Official source:
 
 https://www.netflix.com/tudum/top10/most-popular
 
-The project treats the Most Popular ranking separately from weekly Top
-10 performance.
+The project treats the Most Popular ranking separately from weekly Top 10 performance.
 
-The current all-time ranking is measured over the **first 91 days** of a
-title's release window.
+The current all-time ranking is measured over the **first 91 days** of a title's release window.
 
-------------------------------------------------------------------------
+---
 
-## 4. Netflix Top 10 portal
+## 4. Netflix Top 10 Portal
 
 Official source:
 
@@ -224,45 +195,39 @@ https://www.netflix.com/tudum/top10
 
 Use this for the published Top 10 interface and methodology/context.
 
-------------------------------------------------------------------------
+---
 
-## 5. What We Watched --- First Half of 2026
+## 5. What We Watched — First Half of 2026
 
 Official Netflix report:
 
 https://about.netflix.com/en/news/what-we-watched-the-first-half-of-2026
 
-The H1 2026 report is treated as a separate engagement reference and is
-not silently merged into the weekly Top 10 fact tables.
+The H1 2026 report is treated as a separate engagement reference and is not silently merged into the weekly Top 10 fact tables.
 
-------------------------------------------------------------------------
+---
 
-## Optional external metadata
+## Optional External Metadata
 
-The project can use the supplied legacy TMDB reference data for
-enrichment.
+The project can use the supplied legacy TMDB reference data for enrichment.
 
 It is explicitly classified as:
 
-``` text
+```text
 external_reference_not_catalog
 ```
 
-It is **not** Netflix audience/performance data and is not treated as an
-authoritative Netflix-wide catalog.
+It is **not** Netflix audience/performance data and is not treated as an authoritative Netflix-wide catalog.
 
-------------------------------------------------------------------------
+---
 
 # 🏗️ Architecture
 
-```{=html}
 <p align="center">
-```
-`<img src="assets/02_architecture.png" alt="Netflix Content Intelligence architecture" width="100%">`{=html}
-```{=html}
+<img src="assets/02_architecture.png" alt="Netflix Content Intelligence architecture" width="100%">
 </p>
-```
-``` text
+
+```text
 ┌─────────────────────────────────────────────┐
 │            OFFICIAL NETFLIX DATA            │
 │ Global • Countries • Most Popular           │
@@ -315,423 +280,519 @@ authoritative Netflix-wide catalog.
 └─────────────────────────────────────────────┘
 ```
 
-------------------------------------------------------------------------
+---
 
-# 🔬 Analytical framework
+# 🔬 Analytical Framework
 
 ## Performance
 
--   peak rank
--   average rank
--   peak views
--   peak hours
--   observed longevity
--   elapsed longevity
--   rank volatility
--   performance segmentation
+- Peak rank
+- Average rank
+- Peak views
+- Peak hours
+- Observed longevity
+- Elapsed longevity
+- Rank volatility
+- Performance segmentation
 
 ## Lifecycle
 
--   new titles
--   continuing titles
--   returning titles
--   dropped titles
--   entry cohorts
--   weeks since entry
--   survival curves
--   right-censoring
+- New titles
+- Continuing titles
+- Returning titles
+- Dropped titles
+- Entry cohorts
+- Weeks since entry
+- Survival curves
+- Right-censoring
 
-## Market intelligence
+## Market Intelligence
 
--   country reach
--   title-market persistence
--   country similarity
--   Jaccard similarity
--   Top-1 / Top-3 / Top-10 concentration
--   HHI
--   country/title drilldowns
+- Country reach
+- Title-market persistence
+- Country similarity
+- Jaccard similarity
+- Top-1 / Top-3 / Top-10 concentration
+- HHI
+- Country/title drilldowns
 
 ## Momentum
 
--   weekly movement
--   rank movement
--   exact two-week view acceleration
--   breakout detection
+- Weekly movement
+- Rank movement
+- Exact two-week view acceleration
+- Breakout detection
 
-## Statistical evidence
+## Statistical Evidence
 
--   association analysis
--   effect sizes
--   p-values
--   Benjamini--Hochberg FDR correction
+- Association analysis
+- Effect sizes
+- P-values
+- Benjamini-Hochberg FDR correction
 
-## Predictive analytics
+## Predictive Analytics
 
--   naive baseline
--   Ridge
--   Random Forest
--   HistGradientBoosting
--   permutation importance
--   SHAP when available
--   forecast error analysis
--   chronological model stability
+- Naive baseline
+- Ridge
+- Random Forest
+- HistGradientBoosting
+- Permutation importance
+- SHAP when available
+- Forecast error analysis
+- Chronological model stability
 
-------------------------------------------------------------------------
+---
 
-# 🌍 Global performance
+# 🌍 Global Performance
 
-```{=html}
 <p align="center">
-```
-`<img src="assets/04_global_weekly_views.png" alt="Global weekly views" width="92%">`{=html}
-```{=html}
+<img src="assets/04_global_weekly_views.png" alt="Global weekly views" width="92%">
 </p>
-```
-The global weekly fact contains **10,960 observations covering 274
-weeks**.
+
+The global weekly fact contains **10,960 observations covering 274 weeks**.
 
 The analytical layer examines:
 
--   weekly performance
--   rank trajectories
--   peak performance
--   title longevity
--   movement between weeks
--   title-level performance segments
+- Weekly performance
+- Rank trajectories
+- Peak performance
+- Title longevity
+- Movement between weeks
+- Title-level performance segments
 
-The project does not interpret absence from Top 10 as zero Netflix
-viewing.
+The project does not interpret absence from Top 10 as zero Netflix viewing.
 
-------------------------------------------------------------------------
+---
 
-# 🗺️ Country intelligence
+# 🗺️ Country Intelligence
 
-```{=html}
 <p align="center">
-```
-`<img src="assets/05_country_coverage.png" alt="Country coverage" width="92%">`{=html}
-```{=html}
+<img src="assets/05_country_coverage.png" alt="Country coverage" width="92%">
 </p>
-```
-The country fact contains **510,340 observations across 94 audience
-markets**.
 
-The analysis includes:
+The country-level fact contains:
 
--   market reach
--   market persistence
--   title-market relationships
--   country similarity
--   concentration
--   country drilldowns
--   title drilldowns by market
+- **510,340 observations**
+- **94 audience markets**
+- **274 weeks**
 
-### Important
+The country layer supports analysis of:
 
-`country_name` / country identifiers represent the **audience market
-represented by the ranking**.
+- Market-specific performance
+- Geographic reach
+- Title-market persistence
+- Cross-market breakouts
+- Market concentration
+- Country similarity
+- International content distribution
 
-They are not production-country fields.
+### Country Grain
 
-------------------------------------------------------------------------
+The audited source grain is:
 
-# ⏳ Lifecycle and survival
-
-The project tracks title/entity movement through the Top 10:
-
-``` text
-NEW
- │
- ├──► CONTINUING
- │
- ├──► DROPPED
- │
- └──► RETURNING
+```text
+10 rows / category / week / country
 ```
 
-Lifecycle analysis uses:
+The country dimension represents the **audience market represented by Netflix's dataset**.
 
--   first observed week
--   last observed week
--   observed weeks
--   elapsed calendar weeks
--   entry cohort
--   weeks since entry
--   return behavior
+It should not automatically be interpreted as:
+
+```text
+Country of production
+```
+
+or:
+
+```text
+Country of origin
+```
+
+---
+
+# 🔄 Lifecycle and Survival
+
+The project treats title lifecycle as a sequence of weekly observations.
+
+### Entry
+
+The first observed appearance of a title/entity in the relevant Top 10 dataset.
+
+### Continuation
+
+A title that remains observable in consecutive weeks.
+
+### Return
+
+A title that reappears after an observed gap.
+
+### Drop
+
+A title that is no longer observed after its active run.
+
+### Retention
+
+The number of observed weeks a title remains active.
 
 ### Survival
 
-Survival analysis uses elapsed calendar weeks and explicit
-right-censoring.
+The probability of remaining observable through successive periods.
 
-A title still observed at the dataset boundary is not assigned an
-artificial ending.
+---
 
-------------------------------------------------------------------------
+## Right-Censoring
 
-# ⚡ Breakouts and momentum
+Lifecycle analysis is subject to **right-censoring** at the end of the observation period.
 
-Breakout detection uses **exact two-week intervals**.
+A title still active in the final available week has not necessarily completed its actual lifecycle.
 
-This prevents the analysis from treating observations separated by
-unknown gaps as consecutive.
+Therefore:
 
-The resulting analysis identifies:
-
--   two-week acceleration
--   large weekly movements
--   breakout candidates
--   momentum patterns
-
-------------------------------------------------------------------------
-
-# 📐 Statistical analysis
-
-The statistical layer is designed to add evidence to descriptive
-findings.
-
-It includes:
-
-``` text
-Descriptive comparison
-        ↓
-Statistical test
-        ↓
-Effect size
-        ↓
-Benjamini–Hochberg FDR
-        ↓
-Interpretation
+```text
+Observed survival
+        ≠
+Complete real-world lifetime
 ```
 
-The output contains:
+This distinction is explicitly preserved in the analysis.
 
--   analysis name
--   statistical test
--   p-value
--   effect size
--   sample size
--   BH-adjusted q-value
--   FDR significance flag
+---
 
-Statistical significance is not treated as proof of causality.
+# 🚀 Breakouts and Momentum
 
-------------------------------------------------------------------------
+The project identifies titles showing meaningful short-term movement.
 
-# 🤖 Forecasting and machine learning
+Examples include:
 
-## Target
+- Rank acceleration
+- View acceleration
+- Strong week-over-week growth
+- Two-week momentum
+- New entries
+- Cross-market expansion
+- Sustained performance
 
-The forecasting task is:
+The objective is not simply to identify the largest titles.
+
+The objective is to identify:
+
+> **titles whose trajectory is changing.**
+
+---
+
+# 🧪 Statistical Analysis
+
+The project goes beyond descriptive charts by applying statistical analysis to selected analytical questions.
+
+Methods include:
+
+- Distribution analysis
+- Group comparison
+- Association analysis
+- Effect-size analysis
+- Hypothesis testing
+- Multiple-testing correction
+- Benjamini-Hochberg false discovery rate control
+
+Where applicable, the analysis reports:
+
+- Sample size
+- Test statistic
+- P-value
+- Adjusted P-value
+- Effect size
+- Practical interpretation
+
+Statistical significance is not treated as equivalent to business importance.
+
+---
+
+# 🎯 Forecasting and Machine Learning
+
+The forecasting task is intentionally constrained.
+
+The project predicts:
 
 > **Next-week views for entities with consecutive Top 10 observations.**
 
-This is a conditional forecasting problem.
+It does **not** attempt to predict whether an arbitrary title will enter the Top 10.
 
-It is **not** a model for predicting whether an arbitrary Netflix
-catalog title will enter the Top 10.
+This distinction is important because the available data directly supports a next-week continuation forecasting task more cleanly than a complete future-entry prediction task.
 
-------------------------------------------------------------------------
+---
 
-## Models
+## Chronological Validation
 
-The benchmark includes:
+The final benchmark uses an **80/20 chronological holdout**.
 
--   Naive baseline
--   Ridge Regression
--   Random Forest
--   HistGradientBoosting
+```text
+Historical observations
+───────────────────────────────────────────────→ Time
 
-------------------------------------------------------------------------
-
-## Validation
-
-The audited model uses:
-
-``` text
-Chronological 80/20 holdout
-Cutoff week: 2026-01-25
-Training rows: 1,690
-Test rows: 394
+          TRAIN                     TEST
+           80%                       20%
+────────────────────────────┬──────────────────
+                            │
+                      2026-01-25
+                         cutoff
 ```
 
-No random temporal shuffling is used.
+### Audited Split
 
-------------------------------------------------------------------------
+| Metric | Value |
+|---|---:|
+| Cutoff week | **2026-01-25** |
+| Training rows | **1,690** |
+| Test rows | **394** |
+| Validation strategy | **Chronological 80/20** |
 
-## Verified benchmark
+Randomly mixing future observations into training would create temporal leakage, so the final holdout preserves time ordering.
 
-The current project output reports:
+---
 
-  ------------------------------------------------------------------------------------------------------
-  Model                                   MAE               RMSE           R²        sMAPE           MAE
-                                                                                             improvement
-                                                                                                vs naive
-  -------------------------- ---------------- ------------------ ------------ ------------ -------------
-  Naive                          4,818,781.73       7,693,942.50      -5.0073       0.7051          0.0%
+# 🏆 Forecast Benchmark
 
-  Ridge                          1,306,746.39       2,481,223.14       0.3752       0.3047        72.88%
-
-  Random Forest                    772,008.52       1,811,793.36       0.6669       0.2018        83.98%
-
-  **HistGradientBoosting**     **752,565.16**   **1,748,406.59**   **0.6898**   **0.1974**    **84.38%**
-  ------------------------------------------------------------------------------------------------------
-
-**Best non-naive model in this audited run: HistGradientBoosting.**
-
-```{=html}
 <p align="center">
-```
-`<img src="assets/06_forecast_benchmark.png" alt="Forecast benchmark" width="92%">`{=html}
-```{=html}
+<img src="assets/06_forecast_benchmark.png" alt="Forecast model benchmark" width="92%">
 </p>
-```
-These are out-of-sample predictive results for the defined conditional
-forecasting task. They should not be interpreted causally.
 
-------------------------------------------------------------------------
+| Model | MAE | RMSE | R² | sMAPE | Improvement |
+|---|---:|---:|---:|---:|---:|
+| Naive | 4,818,781.73 | 7,693,942.50 | -5.0073 | 0.7051 | 0% |
+| Ridge | 1,306,746.39 | 2,481,223.14 | 0.3752 | 0.3047 | 72.88% |
+| Random Forest | 772,008.52 | 1,811,793.36 | 0.6669 | 0.2018 | 83.98% |
+| **HistGradientBoosting** | **752,565.16** | **1,748,406.59** | **0.6898** | **0.1974** | **84.38%** |
 
-# 🧠 Model interpretability
+### Best Non-Naive Model
 
-The project includes:
+**HistGradientBoosting**
 
--   permutation importance
--   forecast error analysis
--   model stability across chronological cutoffs
--   SHAP when available
+Audited performance:
 
-Interpretation rule:
+- MAE: **752,565.16**
+- RMSE: **1,748,406.59**
+- R²: **0.6898**
+- sMAPE: **0.1974**
+- Improvement over naive: **84.38%**
 
-``` text
-Predictive importance
+These results describe predictive performance on the defined holdout task.
+
+They should not be interpreted as causal evidence.
+
+---
+
+# 🔎 Model Interpretation
+
+The project supports model diagnostics including:
+
+- Feature importance
+- Permutation importance
+- SHAP when available
+- Error distributions
+- Stability analysis
+- Drift analysis
+- Model comparison
+
+### Important interpretation rule
+
+Predictive importance does not establish causality.
+
+For example:
+
+```text
+Feature is predictive
         ≠
-Causal effect
+Feature causes views
 ```
 
-------------------------------------------------------------------------
+The model is used for prediction and analytical understanding, not causal inference.
 
-# 🖥️ Streamlit dashboard
+---
 
-Run:
+# 🖥️ Dashboard
 
-``` bash
-make dashboard
+The Streamlit dashboard contains **13 analytical pages**.
+
+## 1. Executive Overview
+
+High-level KPIs and overall performance.
+
+## 2. Weekly Briefing
+
+Weekly movement and notable changes.
+
+## 3. Title Explorer
+
+Detailed title/entity exploration.
+
+## 4. Global & Cohorts
+
+Global performance and cohort comparisons.
+
+## 5. Country Intelligence
+
+Market-specific performance and geographic analysis.
+
+## 6. Entry / Retention / Churn
+
+Lifecycle and persistence analysis.
+
+## 7. Lifecycle & Concentration
+
+Survival, concentration and content dependency.
+
+## 8. Breakouts & Momentum
+
+Emerging titles and performance acceleration.
+
+## 9. Forecasting & Model Stability
+
+Forecast predictions, benchmarks and diagnostics.
+
+## 10. Statistical Evidence
+
+Statistical tests and supporting evidence.
+
+## 11. Catalog & Metadata
+
+Metadata enrichment and catalog analysis.
+
+## 12. Most Popular & H1 2026
+
+Most Popular analysis and H1 2026 reporting.
+
+## 13. Data Quality & Provenance
+
+Data-quality checks, source lineage and provenance.
+
+---
+
+# 🗃️ SQL Analytics
+
+The project contains **25 SQL analytical modules**.
+
+```text
+01_quality.sql
+02_global_performance.sql
+03_country_performance.sql
+04_title_performance.sql
+05_lifecycle.sql
+06_retention.sql
+07_churn.sql
+08_momentum.sql
+09_breakouts.sql
+10_concentration.sql
+11_cohorts.sql
+12_market_intelligence.sql
+13_global_country_comparison.sql
+14_rank_analysis.sql
+15_views_analysis.sql
+16_hours_analysis.sql
+17_runtime_analysis.sql
+18_title_stability.sql
+19_market_breadth.sql
+20_content_mix.sql
+21_weekly_trends.sql
+22_entry_analysis.sql
+23_survival_analysis.sql
+24_forecast_features.sql
+25_model_performance_drift.sql
 ```
 
-The current dashboard contains these analysis pages:
+The audited result is:
 
-1.  **Executive Overview**
-2.  **Weekly Briefing**
-3.  **Title Explorer**
-4.  **Global & Cohorts**
-5.  **Country Intelligence**
-6.  **Entry / Retention / Churn**
-7.  **Lifecycle & Concentration**
-8.  **Breakouts & Momentum**
-9.  **Forecasting & Model Stability**
-10. **Statistical Evidence**
-11. **Catalog & Metadata**
-12. **Most Popular & H1 2026**
-13. **Data Quality & Provenance**
-
-The dashboard also provides downloadable analytical CSV views where
-implemented.
-
-------------------------------------------------------------------------
-
-# 🧮 SQL analytics
-
-The repository contains **25 SQL analysis files**.
-
-They cover:
-
--   data quality
--   title performance
--   weekly movement
--   lifecycle
--   cohorts
--   concentration
--   country intelligence
--   country similarity
--   title-market relationships
--   survival
--   breakouts
--   release-age analysis
--   statistical outputs
--   forecasting
--   forecast errors
--   model diagnostics
--   model stability
--   data drift
--   model-performance drift
--   provenance
-
-The project records SQL execution results in:
-
-``` text
-reports/sql_execution_report.json
+```text
+25 / 25 SQL analyses passed
 ```
 
-The audited output reports:
+The SQL layer covers:
 
-``` text
-25 SQL files
-25 passed
-```
+- Data quality
+- Global performance
+- Country performance
+- Title performance
+- Lifecycle
+- Retention
+- Churn
+- Momentum
+- Breakouts
+- Concentration
+- Cohorts
+- Market intelligence
+- Ranking
+- Views
+- Hours
+- Runtime
+- Stability
+- Market breadth
+- Content mix
+- Weekly trends
+- Entry
+- Survival
+- Forecast features
+- Model performance
+- Model drift
 
-------------------------------------------------------------------------
+---
 
-# 🛡️ Data quality and provenance
+# 📊 Data Quality and Provenance
 
-```{=html}
 <p align="center">
-```
-`<img src="assets/07_data_quality.png" alt="Data quality scorecard" width="92%">`{=html}
-```{=html}
+<img src="assets/07_data_quality.png" alt="Data quality scorecard" width="92%">
 </p>
+
+Data quality is treated as a first-class part of the system.
+
+## Audited Quality Metrics
+
+| Quality Metric | Result |
+|---|---:|
+| Source grain integrity | **100%** |
+| Global view coverage | **62.77%** |
+| Global runtime coverage | **62.77%** |
+| Global hours coverage | **100%** |
+| TMDB entity coverage | **51.92%** |
+| Metric validity | **100%** |
+| Title completeness | **100%** |
+
+---
+
+# 🧪 Validation Results
+
+The current audited build reports:
+
+```text
+37 / 37 automated tests passed
+25 / 25 SQL analyses passed
+64 / 64 manifest hashes matched
+SQLite integrity: OK
+Python compilation: PASSED
+Global duplicate grain: NONE
+Country duplicate grain: NONE
+Negative metrics: NONE
+Hardcoded local paths: NONE
+Stale v7 source references: NONE
+TODO/FIXME in source: NONE
+Cache files in final project: NONE
 ```
-The current data-quality scorecard contains these verified metrics:
 
-  Metric                           Score
-  ------------------------- ------------
-  Source grain integrity        **100%**
-  Global view coverage        **62.77%**
-  Global runtime coverage     **62.77%**
-  Global hours coverage         **100%**
-  TMDB entity coverage        **51.92%**
-  Metric validity               **100%**
-  Title completeness            **100%**
-
-### What these numbers mean
-
-**Global view coverage is 62.77%** because Netflix's published weekly
-views are not available for every historical observation.
-
-Those unavailable values are kept missing.
-
-They are **not converted to zero**.
-
-**TMDB entity coverage is 51.92%** and is explicitly an external
-metadata match rate. It is **not Netflix catalog coverage**.
-
-------------------------------------------------------------------------
+---
 
 # 🔐 Provenance
 
 Each build generates:
 
-``` text
+```text
 reports/pipeline_run_manifest.json
 ```
 
-The manifest records source, asset and output information with SHA-256
-hashes.
+The manifest records source, asset and output information with SHA-256 hashes.
 
 The pipeline also validates duplicate aliases.
 
 For the audited source set:
 
-``` text
+```text
 Global weekly aliases:
 NOT counted as unique facts
 
@@ -739,103 +800,86 @@ Most Popular aliases:
 NOT counted as unique facts
 ```
 
-------------------------------------------------------------------------
+This prevents duplicate official-source aliases from being incorrectly double-counted.
 
-# 🧪 Testing
+---
 
-Run:
+# 📦 Current Audited Data Scope
 
-``` bash
-make test
+The latest audited build contains:
+
+```text
+Global weekly observations     10,960
+Country weekly observations   510,340
+Audience markets                   94
+Weeks                              274
+Date range               2021-07-04 → 2026-09-27
+Most Popular records               40
+SQL analyses                       25
+Automated tests                    37
 ```
 
-The project test suite contains **37 tests**.
+### Global Source Grain
 
-The audited result is:
-
-``` text
-37 / 37 passing
+```text
+40 rows / week
 ```
 
-Tests cover:
+### Country Source Grain
 
--   source file contracts
--   global row counts
--   country row counts
--   date ranges
--   weekly grain
--   duplicate source aliases
--   missing-view semantics
--   negative metric checks
--   processed output contracts
--   title mart contracts
--   country similarity bounds
--   survival bounds
--   forecast model presence
--   chronological validation
--   breakout contracts
--   statistical output contracts
--   H1 2026 reference table
--   SQL execution
--   SQLite table contracts
--   provenance manifest
--   data-quality zero-error checks
--   schema contracts
--   Python compilation
--   v8 advanced outputs
--   FDR columns
--   catalog-source classification
--   dashboard contracts
--   stale-v7-path checks
+```text
+10 rows / category / week / country
+```
 
-------------------------------------------------------------------------
+These grain rules are explicitly validated.
+
+---
 
 # ⚙️ Installation
 
-## Clone
+## Clone the Repository
 
-``` bash
+```bash
 git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-
 cd YOUR_REPOSITORY
 ```
 
-## Create a virtual environment
+## Create a Virtual Environment
 
 ### Linux / macOS
 
-``` bash
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
 ### Windows
 
-``` powershell
+```powershell
 python -m venv .venv
 .venv\Scripts\activate
 ```
 
-## Install dependencies
+## Install Dependencies
 
-``` bash
+```bash
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-------------------------------------------------------------------------
+---
 
-# 📥 Download the data
+# 📥 Download the Data
 
 Create the local raw-data directory:
 
-``` bash
+```bash
 mkdir -p data/raw
 ```
 
 Download the official global dataset:
 
-``` bash
+```bash
 curl -L \
 "https://www.netflix.com/tudum/top10/data/all-weeks-global.tsv" \
 -o data/raw/all-weeks-global.tsv
@@ -843,52 +887,49 @@ curl -L \
 
 Download the official country dataset:
 
-``` bash
+```bash
 curl -L \
 "https://www.netflix.com/tudum/top10/data/all-weeks-countries.tsv" \
 -o data/raw/all-weeks-countries.tsv
 ```
 
-Then inspect:
+Inspect the files:
 
-``` bash
+```bash
 ls -lh data/raw/
 ```
 
-### Expected core files
+### Expected Core Files
 
-``` text
+```text
 data/raw/
 ├── all-weeks-global.tsv
 └── all-weeks-countries.tsv
 ```
 
-The current audited build also used the current Most Popular aliases and
-optional legacy TMDB/H1 2026 reference assets.
+The current audited build also used the current Most Popular aliases and optional legacy TMDB/H1 2026 reference assets.
 
-If those optional/source-specific files are required by the current
-pipeline version, obtain them from the source package or official source
-referenced by the project documentation before running a full rebuild.
+If those optional/source-specific files are required by the current pipeline version, obtain them from the source package or official source referenced by the project documentation before running a full rebuild.
 
-------------------------------------------------------------------------
+---
 
-# 🔄 Run the pipeline
+# 🔄 Run the Pipeline
 
 The Makefile provides:
 
-``` bash
+```bash
 make build
 ```
 
 which runs:
 
-``` bash
+```bash
 python3 scripts/run_pipeline.py
 ```
 
 Other commands:
 
-``` bash
+```bash
 make validate
 make analysis
 make test
@@ -897,41 +938,102 @@ make verify
 make clean
 ```
 
-### Full verification
+### Full Verification
 
-``` bash
+```bash
 make verify
 ```
 
-The current Makefile implementation runs:
+The Makefile implementation runs:
 
-``` text
+```text
 python scripts/run_pipeline.py
         ↓
 python -m pytest
 ```
 
-So `make verify` is a rebuild followed by the automated test suite.
+So `make verify` performs a rebuild followed by the automated test suite.
 
-------------------------------------------------------------------------
+> **Audit note:** the latest independent validation confirmed the underlying tests, SQL analyses, manifest hashes, SQLite integrity and compilation separately. A full `make verify` completion should not be claimed unless it has been freshly executed to completion in the current environment.
 
-# 🖥️ Run the dashboard
+---
 
-``` bash
+# 🖥️ Run the Dashboard
+
+```bash
 make dashboard
 ```
 
 Equivalent command:
 
-``` bash
+```bash
 python -m streamlit run dashboard/app.py
 ```
 
-------------------------------------------------------------------------
+Then open the local Streamlit URL shown by the command.
 
-# 📁 Repository structure
+> The dashboard source and underlying database/query contracts were validated. A live Streamlit HTTP smoke test was not completed in the execution environment used for the latest audit because Streamlit was unavailable there.
 
-``` text
+---
+
+# 🧪 Testing
+
+Run:
+
+```bash
+make test
+```
+
+Or:
+
+```bash
+pytest -q
+```
+
+The project test suite contains **37 tests**.
+
+Audited result:
+
+```text
+37 / 37 passing
+```
+
+Tests cover:
+
+- Source file contracts
+- Global row counts
+- Country row counts
+- Date ranges
+- Weekly grain
+- Duplicate source aliases
+- Missing-view semantics
+- Negative metric checks
+- Processed output contracts
+- Title mart contracts
+- Country similarity bounds
+- Survival bounds
+- Forecast model presence
+- Chronological validation
+- Breakout contracts
+- Statistical output contracts
+- H1 2026 reference table
+- SQL execution
+- SQLite table contracts
+- Provenance manifest
+- Data-quality zero-error checks
+- Schema contracts
+- Python compilation
+- Advanced analytical outputs
+- FDR columns
+- Catalog-source classification
+- Dashboard contracts
+- Stale-v7-path checks
+
+---
+
+# 📁 Repository Structure
+
+```text
 netflix_v8_1/
 │
 ├── assets/
@@ -966,10 +1068,12 @@ netflix_v8_1/
 ├── sql/                        # 25 executable SQL analyses
 │
 ├── src/
+│   ├── __init__.py
 │   ├── config.py
 │   ├── validation.py
 │   ├── pipeline.py
-│   └── analysis.py
+│   ├── analysis.py
+│   └── advanced.py
 │
 ├── tests/
 │   └── test_project.py
@@ -981,14 +1085,13 @@ netflix_v8_1/
 └── README.md
 ```
 
-------------------------------------------------------------------------
+---
 
-# 🚫 GitHub data policy
+# 🚫 GitHub Data Policy
 
-Before pushing this repository, make sure the GitHub repository does not
-contain:
+Before pushing this repository, make sure the GitHub repository does not contain:
 
-``` text
+```text
 data/raw/*.tsv
 data/raw/*.csv
 data/processed/*.csv
@@ -1000,7 +1103,7 @@ reports/*.json
 
 A suitable `.gitignore` should include:
 
-``` gitignore
+```gitignore
 data/raw/*
 data/processed/*
 reports/*
@@ -1021,166 +1124,232 @@ __pycache__/
 .DS_Store
 ```
 
-The README visuals under `assets/` are intentionally small, curated
-presentation assets and are safe to keep with the repository.
+The README visuals under `assets/` are intentionally small, curated presentation assets and are safe to keep with the repository.
 
-------------------------------------------------------------------------
+Before pushing, verify that no dataset/database files are tracked:
 
-# ⚠️ Critical interpretation rules
+```bash
+git ls-files | grep -E '\.(csv|tsv|parquet|feather|db|sqlite|sqlite3)$'
+```
 
-## 1. Top 10 is not the complete Netflix catalog
+This command should return **nothing**.
 
-A title absent from the Top 10 dataset is not equivalent to zero
-viewing.
+---
 
-------------------------------------------------------------------------
+# 🔍 Critical Interpretation Rules
 
-## 2. Country is an audience market
+## 1. Top 10 Is Not the Complete Netflix Catalog
 
-Country observations represent the market in which the ranking was
-observed.
+A title absent from the Top 10 dataset is not equivalent to zero viewing.
+
+```text
+Not in Top 10
+      ≠
+Zero viewing
+```
+
+---
+
+## 2. Country Is an Audience Market
+
+Country observations represent the market in which the ranking was observed.
 
 They are not production-country measurements.
 
-------------------------------------------------------------------------
+```text
+Audience market
+      ≠
+Production country
+```
 
-## 3. Missing views are not zero
+---
+
+## 3. Missing Views Are Not Zero
 
 Historical Netflix Top 10 records can have unavailable view metrics.
 
 The pipeline preserves those values as missing.
 
-------------------------------------------------------------------------
+```text
+Missing
+  ≠
+Zero
+```
 
-## 4. TMDB is external metadata
+---
+
+## 4. TMDB Is External Metadata
 
 TMDB enrichment is not Netflix audience data.
 
-The current external metadata match rate is **51.92% at the entity
-level** in the audited build.
+The current external metadata match rate is **51.92% at the entity level** in the audited build.
 
-------------------------------------------------------------------------
+It should not be described as Netflix catalog coverage.
 
-## 5. Prediction is not causation
+---
+
+## 5. Prediction Is Not Causation
 
 Forecasting and feature importance identify predictive relationships.
 
 They do not establish causal effects.
 
-------------------------------------------------------------------------
+```text
+Feature is predictive
+        ≠
+Feature causes views
+```
 
-## 6. Survival observations are censored
+---
 
-Titles still observed at the end of the available time window are
-right-censored.
+## 6. Survival Observations Are Censored
 
-------------------------------------------------------------------------
+Titles still observed at the end of the available time window are right-censored.
 
-## 7. Most Popular is a separate measurement
+Their eventual real-world lifetime may be longer than the observed lifetime.
 
-The Most Popular all-time ranking is measured over the first 91 days and
-should not be interpreted as the same metric as weekly Top 10
-performance.
+---
 
-------------------------------------------------------------------------
+## 7. Most Popular Is a Separate Measurement
+
+The Most Popular all-time ranking is measured over the first 91 days and should not be interpreted as the same metric as weekly Top 10 performance.
+
+---
+
+## 8. H1 2026 Is a Separate Reference Source
+
+The H1 2026 report is maintained as a separate reference dataset and is not silently treated as another weekly Top 10 fact table.
+
+---
 
 # ⚠️ Limitations
 
 This project does not claim to measure:
 
--   the complete Netflix catalog
--   total Netflix viewing across all Netflix titles
--   performance of titles that never appear in the Top 10
--   causal drivers of popularity
--   production-country effects from audience-market data
--   missing views as zero
--   TMDB popularity as Netflix popularity
+- The complete Netflix catalog
+- Total Netflix viewing across all Netflix titles
+- Performance of titles that never appear in the Top 10
+- Causal drivers of popularity
+- Production-country effects from audience-market data
+- Missing views as zero
+- TMDB popularity as Netflix popularity
 
-The detailed methodology and limitations are documented in:
+Additional limitations include:
 
-``` text
-docs/methodology.md
-docs/limitations.md
-```
+### Top 10 Selection Bias
 
-------------------------------------------------------------------------
+The data only represents titles meeting the Top 10 reporting criteria.
 
-# 💼 Skills demonstrated
+### Missing Metrics
 
-### Data Analytics
+Views and hours are not available uniformly across all records.
 
--   Exploratory Data Analysis
--   KPI development
--   Trend analysis
--   Segmentation
--   Market intelligence
--   Lifecycle analysis
--   Business-oriented interpretation
+### Historical Availability
 
-### SQL
+The observation period begins in July 2021.
 
--   Analytical SQL
--   Window functions
--   Cohort analysis
--   Concentration metrics
--   HHI
--   Data-quality queries
--   Model diagnostics
--   Drift analysis
+### Metadata Coverage
 
-### Python
+External TMDB matching is incomplete.
 
--   Pandas
--   NumPy
--   Scikit-learn
--   Data validation
--   Statistical analysis
--   ETL/pipeline development
+Current audited entity coverage:
 
-### Machine Learning
+> **51.92%**
 
--   Regression
--   Forecasting
--   Random Forest
--   HistGradientBoosting
--   Time-aware validation
--   Permutation importance
--   SHAP
--   Forecast error analysis
--   Model stability
+### Forecast Scope
 
-### Data Engineering
+The forecasting task predicts next-week views for already observed consecutive Top 10 entities.
 
--   Source contracts
--   Data normalization
--   Analytical marts
--   SQLite
--   Provenance
--   SHA-256 hashing
--   Reproducible builds
+It does not predict arbitrary future Top 10 entries.
 
-### Visualization / BI
+### Causality
 
--   Streamlit
--   Matplotlib
--   Plotly
--   Executive KPI design
--   Interactive drilldowns
--   Analytical exports
+The project is observational.
 
-### Engineering
+Forecasting relationships and statistical associations should not be interpreted as causal effects.
 
--   Pytest
--   Automated validation
--   Configuration
--   Makefile workflows
--   Git/GitHub
--   Documentation
--   Reproducibility
+### End-of-Window Censoring
 
-------------------------------------------------------------------------
+Lifecycle measurements near the dataset boundary can be incomplete.
 
-# 🎯 Business questions this project supports
+---
+
+# 💼 Skills Demonstrated
+
+## Data Analytics
+
+- Exploratory Data Analysis
+- KPI development
+- Trend analysis
+- Segmentation
+- Market intelligence
+- Lifecycle analysis
+- Business-oriented interpretation
+
+## SQL
+
+- Analytical SQL
+- Window functions
+- Cohort analysis
+- Concentration metrics
+- HHI
+- Data-quality queries
+- Model diagnostics
+- Drift analysis
+
+## Python
+
+- Pandas
+- NumPy
+- Scikit-learn
+- Data validation
+- Statistical analysis
+- ETL/pipeline development
+
+## Machine Learning
+
+- Regression
+- Forecasting
+- Random Forest
+- HistGradientBoosting
+- Time-aware validation
+- Permutation importance
+- SHAP
+- Forecast error analysis
+- Model stability
+
+## Data Engineering
+
+- Source contracts
+- Data normalization
+- Analytical marts
+- SQLite
+- Provenance
+- SHA-256 hashing
+- Reproducible builds
+
+## Visualization / BI
+
+- Streamlit
+- Matplotlib
+- Plotly
+- Executive KPI design
+- Interactive drilldowns
+- Analytical exports
+
+## Engineering
+
+- Pytest
+- Automated validation
+- Configuration
+- Makefile workflows
+- Git/GitHub
+- Documentation
+- Reproducibility
+
+---
+
+# 🎯 Business Questions This Project Supports
 
 ### Content
 
@@ -1196,8 +1365,7 @@ docs/limitations.md
 
 ### Concentration
 
-> Is a title's observed performance concentrated in a small number of
-> markets?
+> Is a title's observed performance concentrated in a small number of markets?
 
 ### Momentum
 
@@ -1207,79 +1375,59 @@ docs/limitations.md
 
 > Can recent Top 10 behavior help estimate next-week views?
 
-### Data quality
+### Data Quality
 
 > Can analytical results be traced back to validated source data?
 
-------------------------------------------------------------------------
+---
 
-# 🖼️ Project visuals
+# 🖼️ Project Visuals
 
 ## Architecture
 
-```{=html}
 <p align="center">
-```
-`<img src="assets/02_architecture.png" alt="Netflix analytics architecture" width="100%">`{=html}
-```{=html}
+<img src="assets/02_architecture.png" alt="Netflix analytics architecture" width="100%">
 </p>
-```
-## Project scale
 
-```{=html}
+## Project Scale
+
 <p align="center">
-```
-`<img src="assets/03_project_kpis.png" alt="Netflix project scale" width="100%">`{=html}
-```{=html}
+<img src="assets/03_project_kpis.png" alt="Netflix project scale" width="100%">
 </p>
-```
-## Global activity
 
-```{=html}
+## Global Activity
+
 <p align="center">
-```
-`<img src="assets/04_global_weekly_views.png" alt="Global weekly views" width="92%">`{=html}
-```{=html}
+<img src="assets/04_global_weekly_views.png" alt="Global weekly views" width="92%">
 </p>
-```
-## Country coverage
 
-```{=html}
+## Country Coverage
+
 <p align="center">
-```
-`<img src="assets/05_country_coverage.png" alt="Country coverage" width="92%">`{=html}
-```{=html}
+<img src="assets/05_country_coverage.png" alt="Country coverage" width="92%">
 </p>
-```
-## Forecast benchmark
 
-```{=html}
+## Forecast Benchmark
+
 <p align="center">
-```
-`<img src="assets/06_forecast_benchmark.png" alt="Forecast benchmark" width="92%">`{=html}
-```{=html}
+<img src="assets/06_forecast_benchmark.png" alt="Forecast benchmark" width="92%">
 </p>
-```
-## Data quality
 
-```{=html}
+## Data Quality
+
 <p align="center">
-```
-`<img src="assets/07_data_quality.png" alt="Data quality scorecard" width="92%">`{=html}
-```{=html}
+<img src="assets/07_data_quality.png" alt="Data quality scorecard" width="92%">
 </p>
-```
 
-------------------------------------------------------------------------
+---
 
-# 🏁 Final takeaway
+# 🏁 Final Takeaway
 
-**Netflix Content Intelligence v8.1 is an end-to-end analytics system,
-not just a visualization project.**
+**Netflix Content Intelligence v8.1 is an end-to-end analytics system, not just a visualization project.**
 
 It combines:
 
-``` text
+```text
 Official source data
        +
 Validation
@@ -1311,7 +1459,7 @@ Provenance
 
 The project is deliberately conservative about what the data can prove:
 
-``` text
+```text
 Observed Top 10 performance
           ≠
 Complete Netflix viewing
@@ -1323,12 +1471,66 @@ Causation
 
 That distinction is central to the design of the project.
 
-------------------------------------------------------------------------
+---
 
-::: {align="center"}
+# 📚 Official References
+
+- Netflix Top 10: https://www.netflix.com/tudum/top10
+- Netflix Global Weekly Dataset: https://www.netflix.com/tudum/top10/data/all-weeks-global.tsv
+- Netflix Country Weekly Dataset: https://www.netflix.com/tudum/top10/data/all-weeks-countries.tsv
+- Netflix Most Popular: https://www.netflix.com/tudum/top10/most-popular
+- Netflix H1 2026 Report: https://about.netflix.com/en/news/what-we-watched-the-first-half-of-2026
+
+---
+
+# 👤 Author
+
+## Shubham Kumar Jha
+
+Data Analytics • Business Analytics • Data Science • Scientific Data Analysis
+
+I build data-driven projects combining:
+
+- Analytics
+- Statistics
+- SQL
+- Python
+- Machine Learning
+- Visualization
+- Scientific analysis
+- Business intelligence
+
+---
+
+# ⭐ If You Find This Project Useful
+
+If this project is useful for learning, portfolio development, analytics engineering, or Netflix/content intelligence research:
+
+- ⭐ Star the repository
+- 🍴 Fork it
+- 🐛 Open an issue
+- 💡 Suggest an improvement
+- 🔬 Explore the analytical methodology
+- 📊 Reproduce the results
+
+---
+
+# 📜 Disclaimer
+
+This project is an independent analytical project and is **not affiliated with, sponsored by, or endorsed by Netflix**.
+
+Netflix and related trademarks belong to their respective owners.
+
+The project uses publicly available Netflix Top 10 data for analytical and educational purposes.
+
+---
+
+<div align="center">
+
 # 🎬 Netflix Content Intelligence v8.1
 
 ### Analyze • Validate • Explain • Forecast
 
 **Python · SQL · Statistics · Machine Learning · Streamlit**
-:::
+
+</div>
