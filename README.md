@@ -26,7 +26,7 @@
 
 ## 📌 What This Project Is
 
-**Netflix Content Intelligence v8.1** is a source-driven analytics project that rebuilds an analytical system from Netflix Top 10 data rather than treating a static dataset as the final product.
+**Netflix Content Intelligence** is a source-driven analytics project that rebuilds an analytical system from Netflix Top 10 data rather than treating a static dataset as the final product.
 
 The pipeline covers:
 
