@@ -1,29 +1,32 @@
 <div align="center">
 
-# Netflix Content Intelligence
+# 🎬 Netflix Content Intelligence
 
 ### Global Performance · Content Lifecycle · Market Intelligence · Forecasting
 
-<p>
-  <img src="assets/01_hero_banner.png" alt="Netflix Content Intelligence hero banner" width="100%">
-</p>
+<img src="assets/01_hero_banner.png" alt="Netflix Content Intelligence — hero banner" width="100%">
 
 <p>
   <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.10+">
-  <img src="https://img.shields.io/badge/SQL-25%20Analysis%20Modules-336791?style=for-the-badge" alt="25 SQL analysis modules">
+  <img src="https://img.shields.io/badge/SQL-25%20Analysis%20Modules-336791?style=for-the-badge" alt="SQL analysis modules">
   <img src="https://img.shields.io/badge/Markets-94-111827?style=for-the-badge" alt="94 audience markets">
   <img src="https://img.shields.io/badge/Tests-37%2F37%20Reported-2E8B57?style=for-the-badge" alt="37 of 37 tests reported passing">
 </p>
 
-**A reproducible analytics project built around Netflix's publicly available Top 10 data.**
+**A source-driven analytics project built around Netflix's publicly available Top 10 data.**
 
-[Explore the visuals](#visual-gallery) · [Understand the analysis](#analytical-framework) · [Forecast benchmark](#forecasting-and-machine-learning) · [Get started](#get-started)
+<p>
+  <a href="#visual-gallery">📊 Explore visuals</a> ·
+  <a href="#analytical-framework">🧠 Analytical framework</a> ·
+  <a href="#forecasting-and-machine-learning">🤖 Forecasting</a> ·
+  <a href="#get-started">🚀 Get started</a>
+</p>
 
 </div>
 
 ---
 
-## At a glance
+## 📌 Project at a glance
 
 <table>
   <tr>
@@ -34,19 +37,20 @@
   </tr>
   <tr>
     <td align="center"><b>25 / 25</b><br><sub>SQL analyses reported passing</sub></td>
-    <td align="center"><b>37 / 37</b><br><sub>Automated tests reported passing</sub></td>
+    <td align="center"><b>37 / 37</b><br><sub>Tests reported passing</sub></td>
     <td align="center"><b>64 / 64</b><br><sub>Manifest hashes reported matching</sub></td>
     <td align="center"><b>13 pages</b><br><sub>Streamlit dashboard</sub></td>
   </tr>
 </table>
 
-> **Audit note:** Counts and test totals shown here come from the supplied project audit; they were not re-run as part of this README update.
+> **Audit note:** The figures and test totals above come from the supplied project audit. They have not been re-run as part of this README redesign.
 >
 > **Measurement boundary:** Netflix Top 10 data describes titles appearing in published rankings. It does **not** measure viewing across the entire Netflix catalogue. A title missing from the Top 10 must not be treated as having zero views.
 
-## Contents
+## 🧭 Contents
 
 - [What this project does](#what-this-project-does)
+- [Workflow infographic](#workflow-infographic)
 - [Visual gallery](#visual-gallery)
 - [Official data sources](#official-data-sources)
 - [Architecture](#architecture)
@@ -68,12 +72,13 @@
 - [Limitations](#limitations)
 - [Skills demonstrated](#skills-demonstrated)
 - [Official references](#official-references)
+- [Contact](#contact)
 
 ---
 
 ## What this project does
 
-The project brings together data ingestion, data-quality checks, normalized analytical tables, SQL analysis, statistical testing, lifecycle measurement, market comparisons, forecasting, model diagnostics, and an interactive dashboard.
+Netflix Content Intelligence turns published weekly Top 10 records into a reproducible analytics workflow. It combines data ingestion, data-quality checks, normalized analytical tables, SQL analysis, statistical testing, lifecycle measurement, market comparisons, forecasting, model diagnostics, and an interactive dashboard.
 
 <table>
   <tr>
@@ -92,7 +97,7 @@ The project brings together data ingestion, data-quality checks, normalized anal
       <h3>🧪 Analytics engineering & modelling</h3>
       <ul>
         <li>Source contracts and data-quality validation</li>
-        <li>25 SQL analysis modules</li>
+        <li>SQL-based analytical modules</li>
         <li>Effect sizes, hypothesis tests, and FDR control</li>
         <li>Chronological next-week views forecasting</li>
         <li>Permutation importance and SHAP when available</li>
@@ -102,27 +107,38 @@ The project brings together data ingestion, data-quality checks, normalized anal
   </tr>
 </table>
 
-## The workflow
+## Workflow infographic
 
 <table>
   <tr>
-    <td align="center" width="16%"><h3>01</h3>📥<br><b>INGEST</b><br><sub>Official Netflix TSVs</sub></td>
-    <td align="center" width="16%"><h3>02</h3>🧹<br><b>VALIDATE</b><br><sub>Schema · grain · quality</sub></td>
-    <td align="center" width="16%"><h3>03</h3>🧱<br><b>MODEL</b><br><sub>Normalized data marts</sub></td>
-    <td align="center" width="16%"><h3>04</h3>🔎<br><b>ANALYZE</b><br><sub>SQL · statistics · lifecycle</sub></td>
-    <td align="center" width="16%"><h3>05</h3>🤖<br><b>FORECAST</b><br><sub>Time-aware ML evaluation</sub></td>
-    <td align="center" width="16%"><h3>06</h3>📊<br><b>DELIVER</b><br><sub>Dashboard · reports · tests</sub></td>
+    <td align="center" width="16%"><h2>01</h2>📥<br><b>INGEST</b><br><sub>Official sources</sub></td>
+    <td align="center" width="16%"><h2>02</h2>🧹<br><b>VALIDATE</b><br><sub>Schema & quality</sub></td>
+    <td align="center" width="16%"><h2>03</h2>🧱<br><b>MODEL</b><br><sub>Clean data marts</sub></td>
+    <td align="center" width="16%"><h2>04</h2>🔎<br><b>ANALYZE</b><br><sub>SQL & statistics</sub></td>
+    <td align="center" width="16%"><h2>05</h2>🤖<br><b>FORECAST</b><br><sub>Time-aware ML</sub></td>
+    <td align="center" width="16%"><h2>06</h2>📊<br><b>DELIVER</b><br><sub>Dashboard & reports</sub></td>
   </tr>
 </table>
 
+```mermaid
+flowchart LR
+    A[Official Netflix data] --> B[Ingestion]
+    B --> C[Validation and quality checks]
+    C --> D[Normalization and analytical marts]
+    D --> E[SQL and statistical analysis]
+    E --> F[Lifecycle and market intelligence]
+    F --> G[Forecasting and model diagnostics]
+    G --> H[Reports and Streamlit dashboard]
+```
+
 ## Visual gallery
 
-The gallery follows the analytical story: system design and project scale, performance, lifecycle and market behaviour, statistical evidence, forecasting, and data quality. The Netflix H1 2026 visuals are contextual references and are kept separate from the weekly Top 10 facts.
+The gallery follows the analytical story: system design and project scale, performance, lifecycle and market behaviour, statistical evidence, forecasting, and data quality. Netflix H1 2026 visuals are contextual references and are kept separate from the weekly Top 10 facts.
 
 <table>
   <tr>
     <td width="50%" valign="top"><h3>1. System architecture</h3><img src="assets/02_architecture.png" alt="System architecture" width="100%"><sub>From official sources through validation, analytics, modelling, and reporting.</sub></td>
-    <td width="50%" valign="top"><h3>2. Project at a glance</h3><img src="assets/03_project_kpis.png" alt="Project KPIs" width="100%"><sub>Dataset size, market coverage, SQL modules, and tests.</sub></td>
+    <td width="50%" valign="top"><h3>2. Project KPIs</h3><img src="assets/03_project_kpis.png" alt="Project KPIs" width="100%"><sub>Dataset size, market coverage, SQL modules, and tests.</sub></td>
   </tr>
   <tr>
     <td valign="top"><h3>3. Global weekly performance</h3><img src="assets/04_global_weekly_views.png" alt="Global weekly views" width="100%"><sub>Observed global Top 10 viewing activity over time.</sub></td>
@@ -239,11 +255,11 @@ Reports · CSV exports · Streamlit dashboard
 
 ## Global performance
 
-The global analysis describes title-level performance within Netflix's published weekly Top 10. It is designed to compare observed performance over time, not to estimate all viewing on Netflix.
+The global analysis describes title-level performance within Netflix's published weekly Top 10. It compares observed performance over time; it does not estimate all viewing on Netflix.
 
-- **Views and hours:** use the supplied metric when it is present; preserve missing values rather than converting them to zero.
-- **Rank:** compare peak and average rank, while remembering that rank is ordinal and depends on the titles in the same weekly ranking.
-- **Persistence:** distinguish the number of observed Top 10 weeks from a title's complete real-world lifetime.
+- **Views and hours:** use the supplied metric when present; preserve missing values rather than converting them to zero.
+- **Rank:** compare peak and average rank while remembering that rank is ordinal and depends on titles in the same weekly ranking.
+- **Persistence:** distinguish observed Top 10 weeks from a title's complete real-world lifetime.
 - **Trend:** interpret week-to-week changes alongside changes in source coverage and metric availability.
 
 ## Country intelligence
@@ -252,14 +268,14 @@ Country-level records represent audience markets. They should not be interpreted
 
 - Compare title presence and performance across markets using consistent time windows.
 - Use market-breadth and persistence measures to distinguish broad reach from isolated appearances.
-- Use Jaccard similarity for overlap in observed title sets, while recognizing that Top 10 cutoffs limit what can be observed.
+- Use Jaccard similarity for overlap in observed title sets, recognizing that Top 10 cutoffs limit what can be observed.
 - Compare global and country results as related but non-identical views of the published measurement.
 
 ## Lifecycle and survival
 
 Lifecycle states describe observed transitions between weekly Top 10 snapshots: entry, continuation, disappearance, and return. These are measurement states, not evidence that people stopped watching a title.
 
-Cohort analysis groups titles by an observed entry period and compares subsequent observed behaviour. Survival analysis must account for **right-censoring**: titles still present at the end of the observation window may remain in the Top 10 after the data ends.
+Cohort analysis groups titles by an observed entry period and compares subsequent behaviour. Survival analysis must account for **right-censoring**: titles still present at the end of the observation window may remain in the Top 10 after the data ends.
 
 ## Breakouts and momentum
 
@@ -272,8 +288,6 @@ A breakout flag is a screening signal, not a causal explanation or a guarantee o
 The statistical workflow supports group and distribution comparisons, association analysis, hypothesis tests, and effect-size reporting. Where multiple hypotheses are tested, the project applies Benjamini–Hochberg false-discovery-rate control as described in its methodology.
 
 Interpret results using both effect sizes and uncertainty—not p-values alone. Statistical association does not establish causation, and conclusions are limited by the observational nature and Top 10 selection of the data.
-
----
 
 ## Forecasting and machine learning
 
@@ -318,7 +332,7 @@ The supplied audit identifies HistGradientBoosting as the strongest non-naive mo
 
 ## SQL analytics
 
-The project contains **25 SQL analysis modules**:
+The project documentation reports 25 SQL analysis modules:
 
 `quality` · `global_performance` · `country_performance` · `title_performance` · `lifecycle` · `retention` · `churn` · `momentum` · `breakouts` · `concentration` · `cohorts` · `market_intelligence` · `global_country_comparison` · `rank_analysis` · `views_analysis` · `hours_analysis` · `runtime_analysis` · `title_stability` · `market_breadth` · `content_mix` · `weekly_trends` · `entry_analysis` · `survival_analysis` · `forecast_features` · `model_performance_drift`.
 
@@ -326,31 +340,12 @@ The project contains **25 SQL analysis modules**:
 
 ## Dashboard
 
-The Streamlit dashboard is organized into 13 analytical pages.
+The documented Streamlit dashboard contains 13 analytical pages:
 
 <table>
   <tr>
-    <td width="50%" valign="top">
-      <ul>
-        <li>Executive Overview</li>
-        <li>Weekly Briefing</li>
-        <li>Title Explorer</li>
-        <li>Global & Cohorts</li>
-        <li>Country Intelligence</li>
-        <li>Entry / Retention / Churn</li>
-        <li>Lifecycle & Concentration</li>
-      </ul>
-    </td>
-    <td width="50%" valign="top">
-      <ul>
-        <li>Breakouts & Momentum</li>
-        <li>Forecasting & Model Stability</li>
-        <li>Statistical Evidence</li>
-        <li>Catalog & Metadata</li>
-        <li>Most Popular & H1 2026</li>
-        <li>Data Quality & Provenance</li>
-      </ul>
-    </td>
+    <td width="50%" valign="top"><ul><li>Executive Overview</li><li>Weekly Briefing</li><li>Title Explorer</li><li>Global & Cohorts</li><li>Country Intelligence</li><li>Entry / Retention / Churn</li><li>Lifecycle & Concentration</li></ul></td>
+    <td width="50%" valign="top"><ul><li>Breakouts & Momentum</li><li>Forecasting & Model Stability</li><li>Statistical Evidence</li><li>Catalog & Metadata</li><li>Most Popular & H1 2026</li><li>Data Quality & Provenance</li></ul></td>
   </tr>
 </table>
 
@@ -379,19 +374,17 @@ Data validation is part of the analytical workflow, not an afterthought.
   </tr>
 </table>
 
-Additional reported checks: Python compilation passed; no duplicate global or country grain was detected; and no negative metrics, hardcoded local paths, stale source references, TODO/FIXME markers, or cache files were found in the audited project.
+Additional reported checks include Python compilation, duplicate-grain checks, metric validity, schema contracts, and provenance checks. These remain reported audit outcomes, not fresh results from this README edit.
 
-A pipeline run generates `reports/pipeline_run_manifest.json`, recording source, asset, and output information with SHA-256 hashes. Duplicate aliases are checked so alternate references to the same official source are not counted as unique facts.
-
-> **Audit qualification:** These are results reported by the supplied project documentation, not freshly re-run as part of this README rewrite. Do not claim that `make verify` has just succeeded unless it has been run to completion in the target environment.
+A pipeline run is documented to generate `reports/pipeline_run_manifest.json`, recording source, asset, and output information with SHA-256 hashes. Duplicate aliases should be checked so alternate references to the same official source are not counted as unique facts.
 
 ## Get started
 
-> The commands below reflect the supplied project documentation. The repository source was not available for execution during this README rewrite, so confirm that the referenced files and Makefile targets exist before running them.
+> The commands below reflect the supplied project documentation. Confirm the actual repository files and Makefile targets before running them; this README update did not execute the pipeline.
 
 ### 1. Clone the repository
 
-Replace the placeholders with the actual GitHub repository URL and folder name.
+Replace the placeholders with your actual GitHub repository URL and folder name.
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
@@ -441,9 +434,11 @@ Inspect the downloaded files:
 ls -lh data/raw/
 ```
 
-The supplied audit also used Most Popular source aliases and optional TMDB / H1 2026 reference assets. If the current pipeline requires these inputs, obtain them from the sources and documentation referenced by the repository before attempting a complete rebuild.
+If the pipeline requires Most Popular data, optional TMDB metadata, or H1 2026 reference assets, obtain those inputs from the source and instructions specified by the repository before running a full rebuild.
 
 ### 5. Run the pipeline and checks
+
+The supplied documentation lists these commands; use only targets that actually exist in your `Makefile`:
 
 ```bash
 make build
@@ -453,7 +448,7 @@ make test
 make verify
 ```
 
-The supplied Makefile description says `make verify` runs the pipeline and then the automated test suite. Run it locally and inspect the exit status before claiming fresh successful verification.
+Run the checks locally and inspect the exit status before claiming that the current code passes.
 
 ### 6. Launch the dashboard
 
@@ -461,7 +456,7 @@ The supplied Makefile description says `make verify` runs the pipeline and then 
 make dashboard
 ```
 
-Equivalent command:
+If the repository uses the documented entry point, the equivalent command is:
 
 ```bash
 python -m streamlit run dashboard/app.py
@@ -471,7 +466,7 @@ Open the local URL printed by Streamlit.
 
 ### Useful commands
 
-| Command | Purpose |
+| Command | Intended purpose |
 |---|---|
 | `make build` | Run the pipeline |
 | `make validate` | Run validation |
@@ -482,6 +477,8 @@ Open the local URL printed by Streamlit.
 | `make clean` | Remove generated outputs according to the Makefile |
 
 ## Repository structure
+
+The following is the documented layout. Adjust it if the actual repository differs.
 
 ```text
 netflix-content-intelligence/
@@ -628,21 +625,28 @@ The dataset begins in July 2021, and view/runtime availability is not uniform ac
 - [Netflix Most Popular](https://www.netflix.com/tudum/top10/most-popular)
 - [Netflix: What We Watched — First Half of 2026](https://about.netflix.com/en/news/what-we-watched-the-first-half-of-2026)
 
-## About the author
+---
+
+## Contact
+
+<div align="center">
+
+### Let's connect
+
+I'm interested in opportunities and conversations around **Data Analytics, Business Analytics, Business Intelligence, Data Science, and applied machine learning**.
+
+<table>
+  <tr>
+    <td align="center" width="33%"><a href="mailto:shubhamkjha.ds@gmail.com"><img src="https://img.shields.io/badge/Email-Contact%20me-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Shubham"></a><br><sub>shubhamkjha.ds@gmail.com</sub></td>
+    <td align="center" width="33%"><a href="https://github.com/shubham-k-jha"><img src="https://img.shields.io/badge/GitHub-View%20projects-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub profile"></a><br><sub>Projects and code</sub></td>
+    <td align="center" width="33%"><a href="https://www.linkedin.com/in/shubham-k-jha/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn profile"></a><br><sub>Professional profile</sub></td>
+  </tr>
+</table>
 
 **Shubham Kumar Jha**  
 Data Analytics · Business Analytics · Data Science · Scientific Data Analysis
 
-I build analytical projects that combine Python, SQL, statistics, machine learning, visualization, and reproducible data workflows.
-
-## Contribute
-
-If this project is useful for learning, portfolio development, analytics engineering, or content-intelligence research:
-
-- ⭐ Star the repository
-- 🍴 Fork it and explore the methodology
-- 🐛 Open an issue for bugs or improvements
-- 🔬 Reproduce the analytical outputs and report discrepancies
+</div>
 
 ## Disclaimer
 
@@ -652,8 +656,10 @@ This is an independent analytical project and is **not affiliated with, sponsore
 
 <div align="center">
 
-**Analyze · Validate · Explain · Forecast**
+### Analyze · Validate · Explain · Forecast
 
 *Python · SQL · Statistics · Machine Learning · Streamlit*
+
+[Back to top](#-netflix-content-intelligence)
 
 </div>
